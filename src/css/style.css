@@ -1,0 +1,28 @@
+aside {
+  position: fixed; /* Stay in place */
+  height: 100%;
+  top: 0px;
+  left: 0px;
+
+  transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+main {
+  position: fixed;
+  height: 100%; /* 100% Full-height */
+  width: 80%; /* 0 width - change this with JavaScript */
+  top: 0px;
+  left: 25%;
+
+  padding: 10px;
+
+  transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+
+  transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+}
