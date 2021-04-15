@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "node_modules/.bin/electron index.html"
+    "start": "node_modules/.bin/electron index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nari",
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bulma": "^0.9.2",
-    "electron": "^12.0.4",
     "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "electron": "^12.0.4",
+    "electron-builder": "^22.10.5"
   }
 }

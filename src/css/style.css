@@ -1,10 +1,8 @@
 aside {
   position: fixed; /* Stay in place */
   height: 100%;
-  top: 0px;
-  left: 0px;
 
-  transition: 1s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 1s;
 }
 
 main {
