@@ -1,28 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <p>Have a cup of coffee: <font-awesome-icon icon="coffee" /></p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/*
+import SideBar from './components/SideBar';
 import 'bulma/css/bulma.css';
+    <SideBar/>
+    */
 
 export default {
   name: 'App',
+  /*
   components: {
-    HelloWorld
+    SideBar
   }
+  */
 };
-
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
