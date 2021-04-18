@@ -1,25 +1,19 @@
 <template>
-  <div id="app">
-    <p>Have a cup of coffee: <font-awesome-icon icon="coffee" /></p>
-  </div>
+  <SideBar/>
 </template>
 
 <script>
-/*
 import SideBar from './components/SideBar';
 import 'bulma/css/bulma.css';
-    <SideBar/>
-    */
 
 export default {
   name: 'App',
-  /*
   components: {
     SideBar
   }
-  */
 };
 </script>
 
 <style>
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 </style>
