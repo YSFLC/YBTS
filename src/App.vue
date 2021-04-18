@@ -1,9 +1,11 @@
 <template>
-  <SideBar/>
+  <div id="app">
+    <SideBar/>
+  </div>
 </template>
 
 <script>
-import SideBar from './components/SideBar';
+import SideBar from '@/components/SideBar';
 import 'bulma/css/bulma.css';
 
 export default {
@@ -16,4 +18,8 @@ export default {
 
 <style>
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+*::-webkit-scrollbar {
+  display:none;
+}
 </style>
