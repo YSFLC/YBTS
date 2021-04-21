@@ -76,10 +76,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 *::-webkit-scrollbar {
   display:none;
+}
+
+* {
+  transition: 0.1s;
 }
 </style>

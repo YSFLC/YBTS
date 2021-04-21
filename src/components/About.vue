@@ -2,7 +2,7 @@
   <section class="hero is-primary">
     <div class="hero-body">
       <p class="title">
-        YSFLC
+        About
       </p>
       <p class="subtitle">
         is poweful book manager
