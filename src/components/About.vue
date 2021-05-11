@@ -5,7 +5,7 @@
         About
       </p>
       <p class="subtitle">
-        is poweful book manager
+        is powerful book manager
       </p>
     </div>
   </section>
