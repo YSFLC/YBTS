@@ -2,10 +2,10 @@
   <section class="hero is-primary">
     <div class="hero-body">
       <p class="title">
-        About
+        YSFLC
       </p>
       <p class="subtitle">
-        is powerful book manager
+        Made with ❤ and <i>SHATIKU PEOPLE</i>
       </p>
     </div>
   </section>
@@ -15,6 +15,11 @@
   <div class="control">
     <div class="tags has-addons">
       <span class="tag is-dark">NULLCT</span>
+      <span class="tag is-info">******</span>
+    </div>
+    <div class="tags has-addons">
+      <!--sasasou here-->
+      <span class="tag is-dark">hogehoge</span>
       <span class="tag is-info">******</span>
     </div>
   </div>
