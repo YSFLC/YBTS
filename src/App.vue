@@ -77,13 +77,12 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
-
-*::-webkit-scrollbar {
-  display:none;
-}
-
-* {
-  transition: 0.1s;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>

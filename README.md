@@ -1,13 +1,24 @@
-# YSFLC
+# ysflc
 
-## 募集中
+## Project setup
+```
+npm install
+```
 
-- 簡単なバックエンド書ける人(node.js)
-- フロントエンド書ける人(vue.js + bulma + animate.js?)
-- アプリアイコン作れる人
-- 色彩センスいい人
-- 暇な人
-- 暇じゃない人
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-now
-![screenshot](scs.png)
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
