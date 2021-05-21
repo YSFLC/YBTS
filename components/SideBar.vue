@@ -20,7 +20,6 @@ export default {
   },
   methods: {
     setActivePane (_input) {
-      console.log(_input)
       this.activepane = _input
       this.$emit('changePane', this.activepane)
     }
