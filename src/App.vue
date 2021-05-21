@@ -41,10 +41,10 @@
     </div>
 
     <div class="column">
-      <DashBoard v-if="activeNum == 0" />
-      <Sell v-if="activeNum == 1" />
-      <DataBase v-if="activeNum == 2" />
-      <About v-if="activeNum == 3" />
+      <DashBoard v-if="activeNum === 0" />
+      <Sell v-if="activeNum === 1" />
+      <DataBase v-if="activeNum === 2" />
+      <About v-if="activeNum === 3" />
     </div>
   </div>
 </template>
@@ -77,12 +77,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
