@@ -18,3 +18,10 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Memo
+
+- [ ] Nuxt.jsへの移行
+- [ ] CL/CIを豪華にする
+- [ ] 読み込み箇所をつくる
+- [ x ] リファクタリング
