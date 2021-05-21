@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>a</p>
+    <SideBar />
   </div>
 </template>
 
