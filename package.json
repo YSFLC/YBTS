@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.5",
-    "buefy": "^0.9.7",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "nuxt-buefy": "^0.4.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
