@@ -1,14 +1,16 @@
 <template>
-  <b-menu>
-    <img src="@/assets/icon.png" width="256" height="256">
-    <b-menu-list label="Menu">
-      <b-menu-item icon="view-dashboard-variant-outline" label="DashBoard" @click="setActivePane(0)" :active="activepane === 0" />
-      <b-menu-item icon="book-open-blank-variant" label="Sell" @click="setActivePane(1)" :active="activepane === 1" />
-    </b-menu-list>
-    <b-menu-list label="Tool">
-      <b-menu-item icon="file-refresh-outline" label="Convert" @click="setActivePane(2)" :active="activepane === 2" />
-    </b-menu-list>
-  </b-menu>
+  <div class="box container">
+    <b-menu>
+      <img src="@/assets/icon.png" width="256" height="256">
+      <b-menu-list label="Menu">
+        <b-menu-item icon="view-dashboard-variant-outline" label="DashBoard" @click="setActivePane(0)" :active="activepane === 0" />
+        <b-menu-item icon="book-open-blank-variant" label="Sell" @click="setActivePane(1)" :active="activepane === 1" />
+      </b-menu-list>
+      <b-menu-list label="Tool">
+        <b-menu-item icon="file-refresh-outline" label="Convert" @click="setActivePane(2)" :active="activepane === 2" />
+      </b-menu-list>
+    </b-menu>
+  </div>
 </template>
 
 <script>
@@ -26,3 +28,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+</style>

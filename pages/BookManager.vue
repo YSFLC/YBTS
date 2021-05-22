@@ -4,7 +4,9 @@
       <SideBar @changePane="getPane" />
     </div>
 
-    <div class="column">
+    <div class="column m-2">
+      <DashBoard v-if="activepane === 0"/>
+      <Sell v-if="activepane === 1"/>
       <Convert v-if="activepane === 2"/>
     </div>
   </div>
