@@ -1,13 +1,27 @@
 # YSFLC
 
-## 募集中
+## Build Setup
 
-- 簡単なバックエンド書ける人(node.js)
-- フロントエンド書ける人(vue.js + bulma + animate.js?)
-- アプリアイコン作れる人
-- 色彩センスいい人
-- 暇な人
-- 暇じゃない人
+```bash
+# install dependencies
+$ npm install
 
-now
-![screenshot](scs.png)
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Memo
+
+- [x] Nuxt.jsへの移行
+- [ ] CL/CIを豪華にする
+- [ ] 読み込み箇所をつくる
+- [x] リファクタリング
