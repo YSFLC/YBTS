@@ -22,6 +22,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 ## Memo
 
 - [x] Nuxt.jsへの移行
-- [ ] CL/CIを豪華にする
+- [x] CL/CIを豪華にする
 - [ ] 読み込み箇所をつくる
 - [x] リファクタリング
