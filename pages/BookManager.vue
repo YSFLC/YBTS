@@ -8,6 +8,7 @@
       <DashBoard v-if="activepane === 0"/>
       <Sell v-if="activepane === 1"/>
       <Convert v-if="activepane === 2"/>
+      <About v-if="activepane === 3" />
     </div>
   </div>
 </template>
