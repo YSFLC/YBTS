@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="レイヤー_1"
+   x="0px"
+   y="0px"
+   width="220"
+   height="150"
+   viewBox="0 0 566.186 443.01272"
+   enable-background="new 0 0 595.28 841.89"
+   xml:space="preserve"
+   sodipodi:docname="YSFLC_logo.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"><title
+   id="title23">YSFLC_logo</title><metadata
+   id="metadata21"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title>YSFLC_logo</dc:title><dc:creator><cc:Agent><dc:title>T.S</dc:title></cc:Agent></dc:creator><dc:contributor><cc:Agent><dc:title>メタデータ付与者: S.K 変な加工した人: NULLCT</dc:title></cc:Agent></dc:contributor></cc:Work></rdf:RDF></metadata><defs
+   id="defs19" /><sodipodi:namedview
+   fit-margin-right="60"
+   fit-margin-bottom="60"
+   fit-margin-left="60"
+   fit-margin-top="60"
+   inkscape:document-rotation="0"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="964"
+   inkscape:window-height="480"
+   id="namedview17"
+   showgrid="false"
+   inkscape:zoom="0.95024289"
+   inkscape:cx="188.60146"
+   inkscape:cy="127.30668"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="レイヤー_1" />
+<text
+   y="375.56937"
+   x="59.891602"
+   font-family="IPAexGothic"
+   font-size="37px"
+   id="text2">YSF Library Commission</text>
+<g
+   transform="translate(-40.284198,-170.16113)"
+   id="g12">
+	<g
+   id="g6">
+		<path
+   fill="none"
+   stroke="#000000"
+   stroke-width="7"
+   stroke-miterlimit="10"
+   d="m 308.468,463.709 c -38.765,-11.263 -79.935,-11.263 -118.7,0 0,-54.869 0,-109.738 0,-164.607 38.765,-11.262 79.935,-11.262 118.7,0 0,54.869 0,109.738 0,164.607 z"
+   id="path4" />
+	</g>
+	<g
+   id="g10">
+		<path
+   fill="none"
+   stroke="#000000"
+   stroke-width="7"
+   stroke-miterlimit="10"
+   d="m 427.168,463.708 c -38.766,-11.263 -79.935,-11.263 -118.7,0 0,-54.869 0,-109.738 0,-164.606 38.766,-11.262 79.935,-11.262 118.7,0 0,54.868 0,109.737 0,164.606 z"
+   id="path8" />
+	</g>
+</g>
+<text
+   y="87.388672"
+   x="192.2446"
+   font-family="IPAexGothic"
+   font-size="37px"
+   id="text14">Y S F L C</text>
+</svg>
