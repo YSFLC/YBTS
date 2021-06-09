@@ -2,7 +2,7 @@
   <div class="box container">
     <b-menu>
       <img src="@/assets/logo.svg" width="256" height="256">
-      <b-menu-list label="Menu">
+      <b-menu-list label="General">
         <b-menu-item icon="view-dashboard-variant-outline" label="DashBoard" :active="activepane === 0" @click="setActivePane(0)" />
         <b-menu-item icon="book-open-blank-variant" label="Sell" :active="activepane === 1" @click="setActivePane(1)" />
         <b-menu-item icon="information-outline" label="About" :active="activepane === 2" @click="setActivePane(2)" />
