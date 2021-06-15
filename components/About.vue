@@ -12,13 +12,6 @@
 </template>
 
 <script>
-function nariNari (n) {
-  for (let i = 0; i < n; i++) {
-    console.log(String(i) + 'nari')
-  }
-}
-
-nariNari(1000)
 </script>
 
 <style scoped>
