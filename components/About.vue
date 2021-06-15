@@ -2,12 +2,12 @@
   <div>
     <p>This is made by</p>
     <h1>Y.Narita</h1>
-    <h2>K.katayama</h2>
-    <h3>Y.Murakami</h3>
-    <h4>I.Siotuki</h4>
-    <h5>S.Tukamoto</h5>
-    <h6>K.Sibuya</h6>
-    <h7>S.Sasaki</h7>
+    <h1>K.katayama</h1>
+    <h1>Y.Murakami</h1>
+    <h1>I.Siotuki</h1>
+    <h1>S.Tukamoto</h1>
+    <h1>K.Sibuya</h1>
+    <h1>S.Sasaki</h1>
   </div>
 </template>
 
