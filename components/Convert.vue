@@ -29,7 +29,6 @@ export default {
       }
 
       let jsondata = JSON.stringify(data)
-      console.log(jsondata)
 
       const blob = new Blob([jsondata], { type: 'text/plain' })
       let link = document.createElement('a')
