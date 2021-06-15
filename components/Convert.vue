@@ -18,7 +18,17 @@ export default {
   },
   methods: {
     convert () {
-      console.log(this.isbntabledata) // eslint-disable-line no-console
+      let data = {}
+
+      for (let i of this.isbntabledata.split('\n')) {
+        if (i !== '') {
+          data[String(i)]['isbn'] = 'a'
+        }
+      }
+
+      console.log(data)
+      let jsondata = JSON.stringify(data)
+      console.log(jsondata)
     }
   }
 }
