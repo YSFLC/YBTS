@@ -9,6 +9,6 @@
 <script>
 export default {
   layout: 'error',
-  props: ['error']
+  props: 'error'
 }
 </script>
