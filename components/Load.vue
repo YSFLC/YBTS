@@ -1,20 +1,7 @@
 <template>
   <div>
-    <b-field class="file is-primary" :class="{ 'has-name': !!file }">
-      <b-upload v-model="file" class="file-label" @change="loadFromFile()">
-        <span class="file-cta">
-          <b-icon class="file-icon" icon="upload" />
-          <span class="file-label">Click to upload</span>
-        </span>
-        <span v-if="file" class="file-name">
-          {{ file.name }}
-        </span>
-      </b-upload>
-    </b-field>
-    <b-button @click="loadFromFile()">
-      読み込む
-    </b-button>
-    {{ val }}
+    <label for="data_upload">ファイル(JSON)を選択</label>
+    <input id="data_upload" type="file" name="data_upload" @change="onFileChange">
   </div>
 </template>
 
@@ -22,18 +9,20 @@
 export default {
   data () {
     return {
-      file: null,
-      val: ''
+      json: null
     }
   },
   methods: {
-    loadFromFile () {
-      let fr = new FileReader()
-
-      fr.onload = function () {
-        console.log(fr.result)
+    onFileChange (e) {
+      let file = e.target.files[0]
+      if (file) {
+        let reader = new FileReader()
+        reader.onload = (e) => {
+          this.json = JSON.parse(e.target.result)
+          this.$emit('jsondata', this.json)
+        }
+        reader.readAsText(file)
       }
-      fr.readAsDataURL(this.file)
     }
   }
 }
