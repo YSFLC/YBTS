@@ -5,7 +5,7 @@
     </div>
     <div class="column m-2">
       <DashBoard v-if="activepane === 0" />
-      <Sell v-if="activepane === 1" :jsondata="json" />
+      <Sell v-if="activepane === 1" :json="json" />
       <About v-if="activepane === 2" />
       <Convert v-if="activepane === 3" />
       <Load v-if="activepane === 4" @jsondata="getJsonData" />
