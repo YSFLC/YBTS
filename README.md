@@ -26,6 +26,9 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - [ ] そろそろ色しっかりしたいのでCSS係は働いてくださいという気持ち
 - [ ] 読み込み箇所をつくる
 
+データはBookManager君が保持して子コンポーネントから操作する感じで  
+ここらへん図書いときたい
+
 ### Json形式
 ```json
 {
