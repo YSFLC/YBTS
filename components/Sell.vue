@@ -15,10 +15,7 @@
 <script>
 export default {
   props: {
-    json: {
-      type: String,
-      default: null
-    }
+    json: {}
   },
   data () {
     return {
@@ -39,20 +36,25 @@ export default {
   },
   methods: {
     addISBN () {
-      this.sellisbn.push({})
-      this.sellisbn[this.sellisbn.length - 1].id = this.sellisbn.length
-      this.sellisbn[this.sellisbn.length - 1].isbn = this.inputisbn
+      console.log(this.sellisbn)
+      console.log(this.inputisbn)
+      if (this.sellisbn.some(String(item => item.isbn) === String(this.sellisbn))) {
+        this.$buefy.toast.open({
+          message: 'あいうえお',
+          type: 'is-danger'
+        })
+      } else {
+        this.sellisbn.push({})
+        this.sellisbn[this.sellisbn.length - 1].id = this.sellisbn.length
+        this.sellisbn[this.sellisbn.length - 1].isbn = this.inputisbn
 
-      this.inputisbn = null
+        this.inputisbn = null
+      }
     },
     removeAllISBN () {
       this.sellisbn.splice(0)
     },
     sell () {
-      this.$buefy.toast.open({
-        message: 'あいうえお',
-        type: 'is-danger'
-      })
     }
   }
 }

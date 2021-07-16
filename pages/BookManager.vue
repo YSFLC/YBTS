@@ -5,7 +5,7 @@
     </div>
     <div class="column m-2">
       <transition mode="out-in">
-        <DashBoard v-if="activepane === 0" />
+        <DashBoard v-if="activepane === 0" :json="json" />
         <Sell v-if="activepane === 1" :json="json" />
         <About v-if="activepane === 2" />
         <Convert v-if="activepane === 3" />

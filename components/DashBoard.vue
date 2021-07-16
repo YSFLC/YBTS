@@ -1,10 +1,15 @@
 <template>
   <div>
-    <p>this is dashboard</p>
+    <p>{{ json }}</p>
   </div>
 </template>
 
 <script>
+export default {
+  props: {
+    json: {}
+  }
+}
 </script>
 
 <style scoped>
