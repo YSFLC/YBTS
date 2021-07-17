@@ -29,13 +29,13 @@
   <div class="tile is-parent">
     <div class="tile is-child box">
       <p class="title">Flamework</p>
-      <p>Vue.js          https://jp.vuejs.org/index.html</p>
-      <p>Node.js          https://nodejs.org/ja/</p>
-      <p>Nuxt.js          https://ja.nuxtjs.org/</p>
-      <p>Buefy          https://buefy.org/</p>
-      <p>Electlon          https://www.electronjs.org/</p>
+      <a href="(https://jp.vuejs.org/index.html)">Vue.js</a>
+      <a href="(https://nodejs.org/ja/)">Node.js</a>
+      <a href="(https://ja.nuxtjs.org/)">Nuxt.js</a>
+      <a href="(https://buefy.org/)">buefy</a>
+      <a href="(https://www.electronjs.org/)">Electlon</a>
     </div>
-  </div>
+ </div>
 </div>
 </div>
 
