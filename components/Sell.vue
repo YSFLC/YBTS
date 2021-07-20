@@ -19,6 +19,9 @@
   1. あなたはつよつよプログラマーで、この汚いコードをリファクタリングしに来た
   2. あなたはつよつよプログラマーで、このYSFLCが動かないと言われソースを見に来た
   3. あなたはつよつよプログラマーで、新しくアプリを作り変えようとソースを見に来た
+
+  ドキュメント化はどっかにされてると思います。
+  コーディング頑張れ！！
 */
 export default {
   props: {
@@ -54,30 +57,51 @@ export default {
       let isExistInJson = () => { // 元帳にデータが存在するか
         return String(this.inputisbn) in this.json
       }
+      let isSold = () => { // もうその本は売れているか
+        return this.json[String(this.inputisbn)].issold
+      }
 
       if (isInputISBNConflict()) { // 同じ入力があった場合
         this.$buefy.toast.open({
           message: this.inputisbn + ' は既に追加されています',
           type: 'is-danger'
         })
-      } else if (isExistInJson()) { // 入力にダブりが無く、元帳にもデータがあった場合(成功)
+      } else if (!isExistInJson()) { // 元帳にデータが存在しなかった場合
+        this.$buefy.toast.open({
+          message: this.inputisbn + ' なんて本は存在しません',
+          type: 'is-danger'
+        })
+      } else if (isSold()) { // 元帳曰く売れている場合
+        this.$buefy.toast.open({
+          message: this.inputisbn + ' は既に売れています',
+          type: 'is-danger'
+        })
+      } else { // 売れる！！！！！！！！！！！！！！！！！！！！！！！！
         this.sellisbn.push({})
         this.sellisbn[this.sellisbn.length - 1].id = this.sellisbn.length
         this.sellisbn[this.sellisbn.length - 1].isbn = this.inputisbn
 
         this.inputisbn = null
-      } else { // 同じ入力はなかったが、元帳にデータが見つからなかった場合(トラウマ(去年あったバグ(こわい)))
-        this.$buefy.toast.open({
-          message: this.inputisbn + ' なんて本は存在しません',
-          type: 'is-danger'
-        })
       }
     },
     removeAllISBN () {
       this.sellisbn.splice(0)
     },
     sell () {
-      console.log(this.json[String(this.sellisbn[0].isbn)])
+      if (this.sellisbn.length === 0) { // ISBNが一個も入力されていなかった場合
+        this.$buefy.toast.open({
+          message: 'ISBNが入力されていません',
+          type: 'is-danger'
+        })
+      } else { // 売れる！！！！！！！！！！！！！！！！！！！！！
+        this.$emit('sell', this.sellisbn)
+
+        this.$buefy.toast.open({
+          message: this.sellisbn.length + ' 冊の本を売却しました'
+        })
+
+        this.removeAllISBN()
+      }
     }
   }
 }

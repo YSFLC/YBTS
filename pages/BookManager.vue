@@ -6,10 +6,11 @@
     <div class="column m-2">
       <transition mode="out-in">
         <DashBoard v-if="activepane === 0" :json="json" />
-        <Sell v-if="activepane === 1" :json="json" />
+        <Sell v-if="activepane === 1" :json="json" @sell="sell" />
         <About v-if="activepane === 2" />
         <Convert v-if="activepane === 3" />
         <Load v-if="activepane === 4" @jsondata="getJsonData" />
+        <Save v-if="activepane === 5" :json="json" />
       </transition>
     </div>
   </div>
@@ -24,11 +25,18 @@ export default {
     }
   },
   methods: {
-    getPane (_input) {
-      this.activepane = _input
+    getPane (input) {
+      this.activepane = input
     },
     getJsonData (json) {
       this.json = json
+    },
+    sell (sellisbn) {
+      let date = new Date()
+      for (let i = 0; i < sellisbn.length; i++) {
+        this.json[String(sellisbn[i].isbn)].issold = true
+        this.json[String(sellisbn[i].isbn)].soldtime = Math.floor(date.getTime() / 1000)
+      }
     }
   }
 }
