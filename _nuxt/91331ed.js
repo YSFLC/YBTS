@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{220:function(n,e,t){"use strict";t.r(e);var o={props:{json:{}}},r=t(36),component=Object(r.a)(o,(function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[t("p",[n._v(n._s(n.json))])])}),[],!1,null,"d22f4406",null);e.default=component.exports}}]);
