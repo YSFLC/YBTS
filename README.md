@@ -23,7 +23,20 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Memo
 
-- [x] Nuxt.jsへの移行
-- [x] CL/CIを豪華にする
+- [ ] そろそろ色しっかりしたいのでCSS係は働いてくださいという気持ち
 - [ ] 読み込み箇所をつくる
-- [x] リファクタリング
+
+データはBookManager君が保持して子コンポーネントから操作する感じで  
+ここらへん図書いときたい
+
+### Json形式
+```json
+{
+  "coupon" : 256,
+  "$isbncode" : {
+    "issold" : false,
+    "soldtime" : 12831283612
+  },
+  ...
+}
+```

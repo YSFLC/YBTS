@@ -14,5 +14,9 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    'prefer-const': 'off',
+    'dot-notation': 'off',
+    'no-console': 'off'
+  }
 }

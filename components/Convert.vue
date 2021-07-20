@@ -3,8 +3,8 @@
     <b-field label="ISBNTable">
       <b-input v-model="isbntabledata" type="textarea" />
     </b-field>
-    <b-button @click="convert">
-      変換
+    <b-button @click="convert()">
+      保存
     </b-button>
   </div>
 </template>
@@ -18,7 +18,23 @@ export default {
   },
   methods: {
     convert () {
-      console.log(this.isbntabledata) // eslint-disable-line no-console
+      let data = {}
+
+      for (let i of this.isbntabledata.split('\n')) {
+        if (i !== '') {
+          data[String(i)] = {}
+          data[String(i)].issold = false
+          data[String(i)].soldtime = null
+        }
+      }
+
+      let jsondata = JSON.stringify(data)
+
+      const blob = new Blob([jsondata], { type: 'text/plain' })
+      let link = document.createElement('a')
+      link.href = window.URL.createObjectURL(blob)
+      link.download = 'isbn.json'
+      link.click()
     }
   }
 }

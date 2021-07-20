@@ -3,12 +3,14 @@
     <div class="column is-narrow">
       <SideBar @changePane="getPane" />
     </div>
-
     <div class="column m-2">
-      <DashBoard v-if="activepane === 0" />
-      <Sell v-if="activepane === 1" />
-      <Convert v-if="activepane === 3" />
-      <About v-if="activepane === 2" />
+      <transition mode="out-in">
+        <DashBoard v-if="activepane === 0" :json="json" />
+        <Sell v-if="activepane === 1" :json="json" />
+        <About v-if="activepane === 2" />
+        <Convert v-if="activepane === 3" />
+        <Load v-if="activepane === 4" @jsondata="getJsonData" />
+      </transition>
     </div>
   </div>
 </template>
@@ -17,16 +19,26 @@
 export default {
   data () {
     return {
-      activepane: 0
+      activepane: 0,
+      json: null
     }
   },
   methods: {
     getPane (_input) {
       this.activepane = _input
+    },
+    getJsonData (json) {
+      this.json = json
     }
   }
 }
 </script>
 
 <style scoped>
+.v-enter-active, .v-leave-active {
+  transition: opacity .1s;
+}
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
 </style>

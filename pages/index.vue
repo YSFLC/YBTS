@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <img src="@/assets/icon.png" width="256" height="256" class="Logo">
+      <img src="@/assets/icon.png" width="512" height="512" class="Logo">
       <h1 class="title">
         YSFLC
       </h1>
