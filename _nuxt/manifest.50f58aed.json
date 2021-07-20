@@ -1,7 +1,7 @@
 {
   "name": "YSFLC",
   "short_name": "YSFLC",
-  "description": "## Build Setup",
+  "description": "for Efficient book management",
   "icons": [
     {
       "src": "/YSFLC/_nuxt/icons/icon_64x64.5d563e.png",
