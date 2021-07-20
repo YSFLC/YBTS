@@ -13,6 +13,13 @@
 </template>
 
 <script>
+/*
+  これを見てるってことは:
+
+  1. あなたはつよつよプログラマーで、この汚いコードをリファクタリングしに来た
+  2. あなたはつよつよプログラマーで、このYSFLCが動かないと言われソースを見に来た
+  3. あなたはつよつよプログラマーで、新しくアプリを作り変えようとソースを見に来た
+*/
 export default {
   props: {
     json: {}
@@ -36,25 +43,41 @@ export default {
   },
   methods: {
     addISBN () {
-      console.log(this.sellisbn)
-      console.log(this.inputisbn)
-      if (this.sellisbn.some(String(item => item.isbn) === String(this.sellisbn))) {
+      let isInputISBNConflict = () => { // 入力したisbnが今までの入力とダブっているかどうか
+        for (let i = 0; i < this.sellisbn.length; i++) {
+          if (this.sellisbn[i].isbn === this.inputisbn) {
+            return true
+          }
+        }
+        return false
+      }
+      let isExistInJson = () => { // 元帳にデータが存在するか
+        return String(this.inputisbn) in this.json
+      }
+
+      if (isInputISBNConflict()) { // 同じ入力があった場合
         this.$buefy.toast.open({
-          message: 'あいうえお',
+          message: this.inputisbn + ' は既に追加されています',
           type: 'is-danger'
         })
-      } else {
+      } else if (isExistInJson()) { // 入力にダブりが無く、元帳にもデータがあった場合(成功)
         this.sellisbn.push({})
         this.sellisbn[this.sellisbn.length - 1].id = this.sellisbn.length
         this.sellisbn[this.sellisbn.length - 1].isbn = this.inputisbn
 
         this.inputisbn = null
+      } else { // 同じ入力はなかったが、元帳にデータが見つからなかった場合(トラウマ(去年あったバグ(こわい)))
+        this.$buefy.toast.open({
+          message: this.inputisbn + ' なんて本は存在しません',
+          type: 'is-danger'
+        })
       }
     },
     removeAllISBN () {
       this.sellisbn.splice(0)
     },
     sell () {
+      console.log(this.json[String(this.sellisbn[0].isbn)])
     }
   }
 }
