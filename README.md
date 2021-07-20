@@ -2,6 +2,8 @@
 
 # YSFLC
 
+for Efficient book management
+
 ## Build Setup
 
 ```bash
@@ -21,13 +23,17 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
+## Document
+
+See the comments in the folder pages,components for detailed implementation  
+Because I don't want to write any documentation
+
+---
+
 ## Memo
 
-- [ ] そろそろ色しっかりしたいのでCSS係は働いてくださいという気持ち
-- [ ] 読み込み箇所をつくる
-
-データはBookManager君が保持して子コンポーネントから操作する感じで  
-ここらへん図書いときたい
+- [x] そろそろ色しっかりしたいのでCSS係は働いてくださいという気持ち
+- [ ] そろそろドキュメント作る
 
 ### Json形式
 ```json
