@@ -12,6 +12,9 @@
         <b-menu-item icon="arrow-up-bold-circle-outline" label="Load" :active="activepane === 4" @click="setActivePane(4)" />
         <b-menu-item icon="download" label="Save" :active="activepane === 5" @click="setActivePane(5)" />
       </b-menu-list>
+      <b-menu-list label="How">
+        <b-menu-item icon="akar-icons:question" label="How to" :active="activepane ===6" @click="setActivePane(6)" />
+      </b-menu-list>
     </b-menu>
   </div>
 </template>
