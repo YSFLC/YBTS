@@ -37,7 +37,7 @@
           <p class="title">
             Framework
           </p>
-           <a href="https://jp.vuejs.org/" target="_blank">Vue.js</a>
+          <a href="https://jp.vuejs.org/" target="_blank">Vue.js</a>
           <a href="https://ja.nuxtjs.org" target="_blank">Nuxt.js</a>
           <a href="https://buefy.org" target="_blank">buefy</a>
           <a href="https://www.electronjs.org" target="_blank">Electlon</a>

@@ -25,7 +25,10 @@
 */
 export default {
   props: {
-    json: {}
+    json: {
+      type: Object,
+      required: true
+    }
   },
   data () {
     return {

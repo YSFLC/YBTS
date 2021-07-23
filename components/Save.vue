@@ -9,7 +9,10 @@
 <script>
 export default {
   props: {
-    json: {}
+    json: {
+      type: Object,
+      required: true
+    }
   },
   methods: {
     save () {

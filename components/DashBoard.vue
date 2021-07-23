@@ -7,7 +7,10 @@
 <script>
 export default {
   props: {
-    json: {}
+    json: {
+      type: Object,
+      required: true
+    }
   }
 }
 </script>
