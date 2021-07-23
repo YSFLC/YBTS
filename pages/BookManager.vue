@@ -7,11 +7,11 @@
       <transition mode="out-in">
         <DashBoard v-if="activepane === 0" :json="json" />
         <Sell v-if="activepane === 1" :json="json" @sell="sell" />
-        <About v-if="activepane === 2" />
-        <Convert v-if="activepane === 3" />
-        <Load v-if="activepane === 4" @jsondata="getJsonData" />
-        <Save v-if="activepane === 5" :json="json" />
-        <Usage v-if="activepane === 6" />
+        <Convert v-if="activepane === 2" />
+        <Load v-if="activepane === 3" @jsondata="getJsonData" />
+        <Save v-if="activepane === 4" :json="json" />
+        <Usage v-if="activepane === 5" />
+        <About v-if="activepane === 6" />
       </transition>
     </div>
   </div>

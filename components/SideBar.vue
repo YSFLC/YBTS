@@ -5,15 +5,15 @@
       <b-menu-list label="General">
         <b-menu-item icon="view-dashboard-variant-outline" label="DashBoard" :active="activepane === 0" @click="setActivePane(0)" />
         <b-menu-item icon="book-open-blank-variant" label="Sell" :active="activepane === 1" @click="setActivePane(1)" />
-        <b-menu-item icon="information-outline" label="About" :active="activepane === 2" @click="setActivePane(2)" />
       </b-menu-list>
       <b-menu-list label="Tool">
-        <b-menu-item icon="file-refresh-outline" label="Convert" :active="activepane === 3" @click="setActivePane(3)" />
-        <b-menu-item icon="arrow-up-bold-circle-outline" label="Load" :active="activepane === 4" @click="setActivePane(4)" />
-        <b-menu-item icon="download" label="Save" :active="activepane === 5" @click="setActivePane(5)" />
+        <b-menu-item icon="file-refresh-outline" label="Convert" :active="activepane === 2" @click="setActivePane(2)" />
+        <b-menu-item icon="arrow-up-bold-circle-outline" label="Load" :active="activepane === 3" @click="setActivePane(3)" />
+        <b-menu-item icon="download" label="Save" :active="activepane === 4" @click="setActivePane(4)" />
       </b-menu-list>
       <b-menu-list label="Others">
-        <b-menu-item icon="help-circle-outline" label="Usage" :active="activepane === 6" @click="setActivePane(6)" />
+        <b-menu-item icon="help-circle-outline" label="Usage" :active="activepane === 5" @click="setActivePane(5)" />
+        <b-menu-item icon="information-outline" label="About" :active="activepane === 6" @click="setActivePane(6)" />
       </b-menu-list>
     </b-menu>
   </div>
