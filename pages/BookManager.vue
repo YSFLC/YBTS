@@ -11,6 +11,7 @@
         <Convert v-if="activepane === 3" />
         <Load v-if="activepane === 4" @jsondata="getJsonData" />
         <Save v-if="activepane === 5" :json="json" />
+        <How v-if="activepane === 6" />
       </transition>
     </div>
   </div>

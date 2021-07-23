@@ -28,15 +28,16 @@
             Version
           </p>
           <p>
-            2021/6/15 Version1.00
+            2021/7/20 Version1.00          クーポン以外の実装
           </p>
         </div>
       </div>
       <div class="tile is-parent">
         <div class="tile is-child box">
           <p class="title">
-            Flamework
+            Framework
           </p>
+           <a href="https://jp.vuejs.org/" target="_blank">Vue.js</a>
           <a href="https://ja.nuxtjs.org" target="_blank">Nuxt.js</a>
           <a href="https://buefy.org" target="_blank">buefy</a>
           <a href="https://www.electronjs.org" target="_blank">Electlon</a>
