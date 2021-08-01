@@ -3,10 +3,9 @@
     <b-field message="ISBNを入力してください">
       <b-input v-model="inputisbn" placeholder="ISBN" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
+      <b-button type="is-info" label="すべて売却" @click="sell" />
+      <b-button type="is-danger" label="すべて削除" @click="removeAllISBN" />
     </b-field>
-
-    <b-button type="is-info" label="すべて売却" @click="sell" />
-    <b-button type="is-danger" label="すべて削除" @click="removeAllISBN" />
 
     <b-table :data="sellisbn" :columns="columns" />
   </div>
