@@ -35,14 +35,26 @@ Because I don't want to write any documentation
 - [x] そろそろ色しっかりしたいのでCSS係は働いてくださいという気持ち
 - [ ] そろそろドキュメント作る
 
-### Json形式
+### Data Structure
 ```json
 {
-  "coupon" : 256,
-  "$isbncode" : {
-    "issold" : false,
-    "soldtime" : 12831283612
+  "coupons" : { // クーポンが使われた集合を列記します。時間についてはunionの各要素に書いてあります
+    {
+      "union": ["1","5"],
+      "num" : 2
+    },
+    ...
   },
-  ...
+  "isbns" : { // 本の台帳です。各本には売れたかどうか、また売れた時間のパラメーターを配合しました
+    "1" : {
+      "issold" : true,
+      "soldtime" : 12831283612
+    },
+    "2" : {
+      "issold" : false,
+      "soldtime" : null
+    },
+    ...
+  }
 }
 ```
