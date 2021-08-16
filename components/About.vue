@@ -14,16 +14,21 @@
           <p class="title">
             Developer
           </p>
-          Y. Narita(principal developer)<br>
-          S. Sasaki(implementation)<br>
-          K. Katayama(implementation)<br>
-          Y. Murakami(UI-related)<br>
-          I. Shiotsuki(UI-related)<br>
-          K. Shibuya(adviser)
+          Y. Narita (Principal developer)<br>
+          S. Sasaki (implementation)<br>
+          K. Katayama (implementation)<br>
+          Y. Murakami (UI-related)<br>
+          I. Shiotsuki (UI-related)<br>
+          K. Shibuya (adviser)<br>
+
+          Thank you for developing this.<br>
         </div>
         <div class="tile is-child box">
           <p class="title">
-            Framework
+            Version
+          </p>
+          <p>
+            2021/7/20 Version1.0.0          クーポン以外の実装
           </p>
           <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
           <a href="https://buefy.org" target="_blank">Buefy</a>
