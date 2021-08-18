@@ -63,7 +63,12 @@ export default {
         return this.json[String(this.inputisbn)].issold
       }
 
-      if (isInputISBNConflict()) { // 同じ入力があった場合
+      if (this.json === null) { // データがインポートされていない場合
+        this.$buefy.toast.open({
+          message: 'データがインポートされていません',
+          type: 'is-danger'
+        })
+      } else if (isInputISBNConflict()) { // 同じ入力があった場合
         this.$buefy.toast.open({
           message: this.inputisbn + ' は既に追加されています',
           type: 'is-danger'
