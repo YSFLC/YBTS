@@ -1,6 +1,6 @@
 ![logo](banner.png)
 
-# YSFLC
+# YSFLC-BookManager
 
 for Efficient book management
 
