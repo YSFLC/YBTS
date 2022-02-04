@@ -32,7 +32,6 @@ Because I don't want to write any documentation
 
 ## Memo
 
-- [x] そろそろ色しっかりしたいのでCSS係は働いてくださいという気持ち
 - [ ] そろそろドキュメント作る
 
 ### Data Structure
