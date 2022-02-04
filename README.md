@@ -1,6 +1,6 @@
 ![logo](banner.png)
 
-# YSFLC-BookManager
+# YBTS
 
 for Efficient book management
 
