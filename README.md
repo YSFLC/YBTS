@@ -33,6 +33,7 @@ Because I don't want to write any documentation
 ## Memo
 
 - [ ] そろそろドキュメント作る
+- [ ] リポジトリ移行
 
 ### Data Structure
 ```json
