@@ -6,12 +6,12 @@ export default {
   target: 'static',
 
   router: {
-    base: '/YSFLC-BookManager/'
+    base: '/YBTS/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'YSFLC-BookManager',
+    title: 'YBTS',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
