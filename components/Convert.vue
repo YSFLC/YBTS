@@ -20,6 +20,7 @@ export default {
     convert () {
       let data = {}
       data['isbn'] = {}
+      data['log'] = {}
 
       for (let i of this.isbntabledata.split('\n')) {
         if (i !== '') {

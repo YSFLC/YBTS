@@ -23,7 +23,7 @@
 export default {
   data () {
     return {
-      activepane: 0
+      activepane: 5
     }
   },
   methods: {

@@ -6,7 +6,7 @@
     <div class="column m-2">
       <transition mode="out-in">
         <DashBoard v-if="activepane === 0" :json="json" />
-        <Sell v-if="activepane === 1" :json="json" @sell="sell" />
+        <Sell v-if="activepane === 1" :json="json" @sell="sell" @addlog="addlog" />
         <Convert v-if="activepane === 2" />
         <Load v-if="activepane === 3" @jsondata="getJsonData" />
         <Save v-if="activepane === 4" :json="json" />
@@ -21,7 +21,7 @@
 export default {
   data () {
     return {
-      activepane: 0,
+      activepane: 5,
       json: null
     }
   },
@@ -38,6 +38,12 @@ export default {
         this.json['isbn'][String(sellisbn[i].isbn)].issold = true
         this.json['isbn'][String(sellisbn[i].isbn)].soldtime = Math.floor(date.getTime() / 1000)
       }
+    },
+    addlog (logtype, comment) {
+      let date = new Date()
+      this.json['log'][Math.floor(date.getTime() / 1000)] = {}
+      this.json['log'][Math.floor(date.getTime() / 1000)].logtype = logtype
+      this.json['log'][Math.floor(date.getTime() / 1000)].comment = comment
     }
   }
 }

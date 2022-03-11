@@ -3,9 +3,9 @@
     <b-field message="ISBNを入力してください">
       <b-input v-model="inputisbn" placeholder="ISBN" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
-      <b-button type="is-info" label="すべて売却" @click="sell" />
-      <b-button type="is-danger" label="すべて削除" @click="removeAllISBN" />
     </b-field>
+    <b-button type="is-info" label="すべて売却" @click="sell" />
+    <b-button type="is-danger" label="すべて削除" @click="removeAllISBN" />
 
     <b-table :data="sellisbn" :columns="columns" />
   </div>
@@ -53,22 +53,27 @@ export default {
         return this.json['isbn'][String(this.inputisbn)].issold
       }
 
-      if (this.json['isbn'] === null) { // データがインポートされていない場合
+      if (this.json['isbn'] === null) { // E-000 データがインポートされていない場合
+        this.$emit('addlog', 'E-000', null)
         this.$buefy.toast.open({
           message: 'データがインポートされていません',
           type: 'is-danger'
         })
-      } else if (isInputISBNConflict()) { // 同じ入力があった場合
+      } else if (isInputISBNConflict()) { // E-001 同じ入力があった場合
+        console.log('E-001')
+        this.$emit('addlog', 'E-001', this.inputisbn)
         this.$buefy.toast.open({
           message: this.inputisbn + ' は既に追加されています',
           type: 'is-danger'
         })
-      } else if (!isExistInJson()) { // 元帳にデータが存在しなかった場合
+      } else if (!isExistInJson()) { // E-002 元帳にデータが存在しなかった場合
+        this.$emit('addlog', 'E-002', this.inputisbn)
         this.$buefy.toast.open({
           message: this.inputisbn + ' なんて本は存在しません',
           type: 'is-danger'
         })
-      } else if (isSold()) { // 元帳曰く売れている場合
+      } else if (isSold()) { // E-003 元帳曰く売れている場合
+        this.$emit('addlog', 'E-003', this.inputisbn)
         this.$buefy.toast.open({
           message: this.inputisbn + ' は既に売れています',
           type: 'is-danger'
