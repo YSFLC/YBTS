@@ -57,13 +57,13 @@ export default {
         return false
       }
       let isExistInJson = () => { // 元帳にデータが存在するか
-        return String(this.inputisbn) in this.json
+        return String(this.inputisbn) in this.json['isbn']
       }
       let isSold = () => { // もうその本は売れているか
-        return this.json[String(this.inputisbn)].issold
+        return this.json['isbn'][String(this.inputisbn)].issold
       }
 
-      if (this.json === null) { // データがインポートされていない場合
+      if (this.json['isbn'] === null) { // データがインポートされていない場合
         this.$buefy.toast.open({
           message: 'データがインポートされていません',
           type: 'is-danger'

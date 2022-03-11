@@ -19,12 +19,13 @@ export default {
   methods: {
     convert () {
       let data = {}
+      data['isbn'] = {}
 
       for (let i of this.isbntabledata.split('\n')) {
         if (i !== '') {
-          data[String(i)] = {}
-          data[String(i)].issold = false
-          data[String(i)].soldtime = null
+          data['isbn'][String(i)] = {}
+          data['isbn'][String(i)].issold = false
+          data['isbn'][String(i)].soldtime = null
         }
       }
 

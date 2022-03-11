@@ -35,8 +35,8 @@ export default {
     sell (sellisbn) {
       let date = new Date()
       for (let i = 0; i < sellisbn.length; i++) {
-        this.json[String(sellisbn[i].isbn)].issold = true
-        this.json[String(sellisbn[i].isbn)].soldtime = Math.floor(date.getTime() / 1000)
+        this.json['isbn'][String(sellisbn[i].isbn)].issold = true
+        this.json['isbn'][String(sellisbn[i].isbn)].soldtime = Math.floor(date.getTime() / 1000)
       }
     }
   }
