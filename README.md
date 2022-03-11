@@ -28,6 +28,13 @@ for Efficient book management
       "soldtime" : null
     },
     ...
+  },
+  "log" : {
+    {
+      "time": (ゆにっくすたいむ),
+      "errortype": (理由)
+      "dump": (その状況でのdbの値)
+    }
   }
 }
 ```
