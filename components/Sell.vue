@@ -5,7 +5,7 @@
       <b-button type="is-primary" label="追加" @click="addISBN" />
     </b-field>
     <b-button type="is-info" label="すべて売却" @click="sell" />
-    <b-button type="is-danger" label="すべて削除" @click="removeAllISBN" />
+    <b-button type="is-danger" label="全追加取り消し" @click="removeAllISBN" />
 
     <b-table :data="sellisbn" :columns="columns" />
   </div>
