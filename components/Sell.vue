@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       inputisbn: null, // ISBN入力欄
-      sellisbn: [],  // 購入リスト
+      sellisbn: [], // 購入リスト
       columns: [
         {
           field: 'id',
@@ -91,7 +91,7 @@ export default {
     },
     sell () {
       if (this.sellisbn.length === 0) { // ISBNが一個も入力されていなかった場合
-      this.$emit('addlog', 'E-004', this.sellisbn)
+        this.$emit('addlog', 'E-004', this.sellisbn)
         this.$buefy.toast.open({
           message: 'ISBNが入力されていません',
           type: 'is-danger'
