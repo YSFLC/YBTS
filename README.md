@@ -32,8 +32,8 @@ for Efficient book management
   "log" : {
     {
       "time": (ゆにっくすたいむ),
-      "errortype": (理由)
-      "dump": (その状況でのdbの値)
+      "errortype": (理由),
+      "dump": (その状況を追える任意のデータ)
     }
   }
 }
