@@ -32,6 +32,12 @@ for Efficient book management
       "logtype": "E-003", // ログの種類です　https://github.com/YSFLC/YBTS/wiki/エラータイプ一覧 に詳細を書きました
       "comment": "1" // ログに付随する情報です　上URLに同じく詳細が書いてあります
     }
+  },
+  "coupon": { // クーポン使用履歴
+    "167008380": {
+      "set": [任意のISBNたち], // 
+      "num": クーポンの枚数
+    }
   }
 }
 ```
