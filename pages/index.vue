@@ -9,10 +9,7 @@
         v1.0.0
       </h5>
       <div class="links">
-        <NuxtLink
-          to="/BookManager"
-          class="button--green"
-        >
+        <NuxtLink to="/BookManager" class="button--green">
           はじめる
         </NuxtLink>
         <a
@@ -43,16 +40,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

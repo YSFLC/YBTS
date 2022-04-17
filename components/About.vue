@@ -27,19 +27,17 @@
           <p class="title">
             Version
           </p>
-          <p>
-            2021/7/20 Version1.0.0          クーポン以外の実装
-          </p>
+          <p>2021/7/20 Version1.0.0 クーポン以外の実装</p>
           <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
           <a href="https://buefy.org" target="_blank">Buefy</a>
         </div>
       </div>
       <div class="tile is-child box">
-          <p class="title">
-            What we used
-          </p>
-          <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
-          <a href="https://buefy.org" target="_blank">Buefy</a>
+        <p class="title">
+          What we used
+        </p>
+        <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
+        <a href="https://buefy.org" target="_blank">Buefy</a>
       </div>
     </div>
   </div>

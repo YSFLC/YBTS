@@ -1,12 +1,12 @@
 <template>
   <div>
-    <b-field class="file is-primary" :class="{'has-name': !!file}">
+    <b-field class="file is-primary" :class="{ 'has-name': !!file }">
       <b-upload v-model="file" class="file-label" @change="onFileChange">
         <span class="file-cta">
           <b-icon class="file-icon" icon="upload" />
           <span class="file-label">Click to upload</span>
         </span>
-        <span class="file-name" v-if="file">
+        <span v-if="file" class="file-name">
           {{ file.name }}
         </span>
       </b-upload>
