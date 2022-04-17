@@ -21,6 +21,7 @@ export default {
       let data = {}
       data['version'] = '0.0.1'
       data['isbn'] = {}
+      data['union'] = {}
       data['log'] = {}
 
       for (let i of this.isbntabledata.split('\n')) {
