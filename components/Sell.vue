@@ -4,10 +4,12 @@
       <b-input v-model="inputisbn" placeholder="ISBN" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
     </b-field>
+    <b-table :data="sellisbn" :columns="columns" />
+    <b-field message="クーポンの数を入力してください">
+      <b-numberinput v-model="couponnum" min="0" placeholder="0" controls-position="compact" />
+    </b-field>
     <b-button type="is-info" label="すべて売却" @click="sell" />
     <b-button type="is-danger" label="全追加取り消し" @click="removeAllISBN" />
-
-    <b-table :data="sellisbn" :columns="columns" />
   </div>
 </template>
 
@@ -22,6 +24,7 @@ export default {
   data () {
     return {
       inputisbn: null, // ISBN入力欄
+      couponnum: 0, // クーポンの数
       sellisbn: [], // 購入リスト
       columns: [
         {
@@ -82,7 +85,6 @@ export default {
         this.sellisbn.push({})
         this.sellisbn[this.sellisbn.length - 1].id = this.sellisbn.length
         this.sellisbn[this.sellisbn.length - 1].isbn = this.inputisbn
-
         this.inputisbn = null
       }
     },
@@ -90,14 +92,22 @@ export default {
       this.sellisbn.splice(0)
     },
     sell () {
-      if (this.sellisbn.length === 0) { // ISBNが一個も入力されていなかった場合
+      if (this.sellisbn.length === 0) { // E-004 ISBNが一個も入力されていなかった場合
         this.$emit('addlog', 'E-004', this.sellisbn)
         this.$buefy.toast.open({
           message: 'ISBNが入力されていません',
           type: 'is-danger'
         })
+      } else if (this.sellisbn.length < this.couponnum) { // E-005 & E-006
+        this.$emit('addlog', 'E-005', this.couponnum)
+        this.$emit('addlog', 'E-006', this.sellisbn)
+        this.$buefy.toast.open({
+          message: 'クーポンは ' + this.couponnum + '枚で 本の数 ' + this.sellisbn.length + ' を超えています',
+          type: 'is-danger'
+        })
       } else { // 売れる！！！！！！！！！！！！！！！！！！！！！
         this.$emit('sell', this.sellisbn)
+        this.$emit('addCoupon', this.couponnum, this.sellisbn)
 
         this.$buefy.toast.open({
           message: this.sellisbn.length + ' 冊の本を売却しました'
