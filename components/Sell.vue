@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div class="fullheight">
     <b-field message="ISBNを入力してください">
       <b-input v-model="inputisbn" placeholder="ISBN" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
     </b-field>
-    <b-table :data="sellisbn" :columns="columns" />
+    <b-table :data="sellisbn" :columns="columns">
+      <template #empty>
+        <div class="has-text-centered">まだ入力されていません</div>
+      </template>
+    </b-table>
     <b-field message="クーポンの数を入力してください">
       <b-numberinput v-model="couponnum" min="0" placeholder="0" controls-position="compact" />
     </b-field>
@@ -121,4 +125,7 @@ export default {
 </script>
 
 <style scoped>
+.fullheight {
+  min-height: 95vh;
+}
 </style>
