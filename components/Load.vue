@@ -1,7 +1,16 @@
 <template>
   <div>
-    <label for="data_upload">ファイル(JSON)を選択</label>
-    <input id="data_upload" type="file" name="data_upload" @change="onFileChange">
+    <b-field class="file is-primary" :class="{'has-name': !!file}">
+      <b-upload v-model="file" class="file-label" @change="onFileChange">
+        <span class="file-cta">
+          <b-icon class="file-icon" icon="upload" />
+          <span class="file-label">Click to upload</span>
+        </span>
+        <span class="file-name" v-if="file">
+          {{ file.name }}
+        </span>
+      </b-upload>
+    </b-field>
   </div>
 </template>
 
@@ -9,6 +18,7 @@
 export default {
   data () {
     return {
+      file: null,
       json: null
     }
   },
