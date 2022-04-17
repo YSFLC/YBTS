@@ -19,7 +19,7 @@ export default {
   methods: {
     convert () {
       let data = {}
-      data['version'] = '0.0.1'
+      data['version'] = '2.0.0'
       data['isbn'] = {}
       data['union'] = {}
       data['log'] = {}
