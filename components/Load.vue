@@ -1,38 +1,61 @@
 <template>
-  <div>
-    <b-field class="file is-primary" :class="{ 'has-name': !!file }">
-      <b-upload v-model="file" class="file-label" @change="onFileChange">
-        <span class="file-cta">
-          <b-icon class="file-icon" icon="upload" />
-          <span class="file-label">Click to upload</span>
-        </span>
-        <span v-if="file" class="file-name">
-          {{ file.name }}
-        </span>
+  <section>
+    <b-field>
+      <b-upload
+        v-model="file"
+        drag-drop
+        accept=".json"
+      >
+        <section class="section">
+          <div class="content has-text-centered">
+            <p>
+              <b-icon
+                icon="upload"
+                size="is-large"
+              />
+            </p>
+            <p v-if="file.name == undefined">
+              データをドラッグ&ドロップ
+            </p>
+            <p v-else>
+              {{ file.name }}
+              {{ file.size }}byte
+            </p>
+          </div>
+        </section>
       </b-upload>
     </b-field>
-  </div>
+
+    <b-button type="is-info" label="読み込み" @click="read" />
+  </section>
 </template>
 
 <script>
 export default {
   data () {
     return {
-      file: null,
-      json: null
+      file: 0
     }
   },
   methods: {
-    onFileChange (e) {
-      let file = e.target.files[0]
-      if (file) {
-        let reader = new FileReader()
-        reader.onload = (e) => {
-          this.json = JSON.parse(e.target.result)
-          this.$emit('jsondata', this.json)
+    read () {
+      const reader = new FileReader()
+      reader.onload = () => {
+        const json = JSON.parse(reader.result)
+
+        if (json['version'] === '2.0.0') {
+          this.$buefy.toast.open({
+            message: '本 ' + Object.keys(json['isbn']).length + ' 冊を正常にインポートしました'
+          })
+        } else {
+          this.$buefy.toast.open({
+            message: '非サポートのバージョンですが、本 ' + Object.keys(json['isbn']).length + ' 冊をインポートしました',
+            type: 'is-danger'
+          })
         }
-        reader.readAsText(file)
+        this.$emit('jsondata', JSON.parse(reader.result))
       }
+      reader.readAsText(this.file)
     }
   }
 }
