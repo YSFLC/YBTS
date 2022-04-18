@@ -24,6 +24,7 @@
 </template>
 
 <script>
+document.addEventListener('touchmove', (e) => { e.preventDefault() }, { passive: false })
 export default {
   data () {
     return {
@@ -69,6 +70,12 @@ export default {
   }
 }
 </script>
+
+<style>
+html,body{
+  overflow: hidden
+}
+</style>
 
 <style scoped>
 .v-enter-active,
