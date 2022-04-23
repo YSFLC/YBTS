@@ -13,7 +13,7 @@
           はじめる
         </NuxtLink>
         <a
-          href="https://github.com/NULLCT/YSFLC"
+          href="https://github.com/YSFLC/YBTS"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
