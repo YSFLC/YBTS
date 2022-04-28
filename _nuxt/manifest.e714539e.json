@@ -1,7 +1,7 @@
 {
   "name": "ysflc",
   "short_name": "ysflc",
-  "description": "for Efficient book management",
+  "description": "![logo](banner.png)",
   "icons": [
     {
       "src": "/YBTS/_nuxt/icons/icon_64x64.5d563e.png",
