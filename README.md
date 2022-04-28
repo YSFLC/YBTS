@@ -1,6 +1,5 @@
-![logo](banner.png)
-
 # YBTS
+![logo](banner.png)
 
 for Efficient book management
 
