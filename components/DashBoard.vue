@@ -1,6 +1,25 @@
 <template>
   <div>
     <p>{{ json }}</p>
+    <b-table :data="isbntable" focusable paginated>
+      <b-table-column v-slot="props" field="isbn" label="ISBN" sortable>
+        {{ props.row.isbn }}
+      </b-table-column>
+      <b-table-column v-slot="props" field="issold" label="売却" sortable>
+        <span v-if="props.row.issold" class="tag is-success">
+          売却済
+        </span>
+        <span v-else class="tag is-danger">
+          未売却
+        </span>
+      </b-table-column>
+      <b-table-column v-slot="props" field="soldtime" label="時刻" sortable>
+        <span v-if="props.row.issold">
+          {{ (new Date(props.row.soldtime*1000)).toLocaleDateString() + " " + (new Date(props.row.soldtime*1000)).toLocaleTimeString() }}
+        </span>
+        <span v-else />
+      </b-table-column>
+    </b-table>
   </div>
 </template>
 
@@ -10,6 +29,21 @@ export default {
     json: {
       type: undefined,
       required: true
+    }
+  },
+  data () {
+    return {
+      isbntable: Object
+    }
+  },
+  mounted () {
+    this.isbntable = []
+    for (const i in this.json['isbn']) {
+      if (this.json.isbn[i].issold) {
+        this.isbntable.push({ isbn: i, issold: true, soldtime: this.json.isbn[i].soldtime })
+      } else {
+        this.isbntable.push({ isbn: i, issold: false, soldtime: this.json.isbn[i].soldtime })
+      }
     }
   }
 }
