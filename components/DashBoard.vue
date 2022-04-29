@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>{{ json }}</p>
     <b-table :data="isbntable" focusable paginated>
       <b-table-column v-slot="props" field="isbn" label="ISBN" sortable>
         {{ props.row.isbn }}
@@ -17,7 +16,9 @@
         <span v-if="props.row.issold">
           {{ (new Date(props.row.soldtime*1000)).toLocaleDateString() + " " + (new Date(props.row.soldtime*1000)).toLocaleTimeString() }}
         </span>
-        <span v-else />
+        <span v-else class="tag is-danger">
+          データなし
+        </span>
       </b-table-column>
     </b-table>
   </div>
@@ -36,7 +37,7 @@ export default {
       isbntable: Object
     }
   },
-  mounted () {
+  created () {
     this.isbntable = []
     for (const i in this.json['isbn']) {
       if (this.json.isbn[i].issold) {
