@@ -6,12 +6,20 @@
         YSFLC
       </h1>
       <h5 class="subtitle">
-        v1.0.0
+        v2.0.0
       </h5>
       <div class="links">
         <NuxtLink to="/BookManager" class="button--green">
           はじめる
         </NuxtLink>
+        <a
+          href="https://github.com/YSFLC/YBTS/wiki"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--grey"
+        >
+          Wiki
+        </a>
         <a
           href="https://github.com/YSFLC/YBTS"
           target="_blank"
