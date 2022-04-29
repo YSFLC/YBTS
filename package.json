@@ -15,7 +15,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.22.1",
     "nuxt": "^2.15.3",
-    "nuxt-buefy": "^0.4.22"
+    "nuxt-buefy": "^0.4.22",
+    "vue-apexcharts": "^1.6.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

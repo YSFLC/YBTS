@@ -1,6 +1,7 @@
 <template>
   <div>
-    <b-table :data="isbntable" focusable paginated>
+    <EarningGraph :json="json" :segment="segment" />
+    <b-table :data="isbntable" focusable paginated per-page="10">
       <b-table-column v-slot="props" field="isbn" label="ISBN" sortable>
         {{ props.row.isbn }}
       </b-table-column>
