@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-field label="ISBNTable">
+    <b-field label="ISBNを改行区切りで入力してください">
       <b-input v-model="isbntabledata" type="textarea" />
     </b-field>
     <b-button @click="convert()">
@@ -26,9 +26,18 @@ export default {
 
       for (let i of this.isbntabledata.split('\n')) {
         if (i !== '') {
-          data['isbn'][String(i)] = {}
-          data['isbn'][String(i)].issold = false
-          data['isbn'][String(i)].soldtime = null
+          if (i in data['isbn']) {
+            this.$buefy.notification.open({
+              message: 'ISBN ' + i + ' が重複していました',
+              position: 'is-bottom-right',
+              type: 'is-danger',
+              hasIcon: true
+            })
+          } else {
+            data['isbn'][String(i)] = {}
+            data['isbn'][String(i)].issold = false
+            data['isbn'][String(i)].soldtime = null
+          }
         }
       }
 
