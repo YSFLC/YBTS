@@ -14,7 +14,7 @@
                 size="is-large"
               />
             </p>
-            <p v-if="file.name == undefined">
+            <p v-if="file === undefined">
               データをドラッグ&ドロップ
             </p>
             <p v-else>
@@ -34,7 +34,7 @@
 export default {
   data () {
     return {
-      file: 0
+      file: undefined
     }
   },
   methods: {

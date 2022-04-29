@@ -8,7 +8,7 @@
 export default {
   props: {
     json: {
-      type: Object,
+      type: undefined,
       required: true
     }
   }

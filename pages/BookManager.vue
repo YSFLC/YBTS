@@ -1,7 +1,7 @@
 <template>
   <div class="columns">
     <div class="column is-narrow">
-      <SideBar @changePane="getPane" />
+      <SideBar :json="json" @changePane="getPane" />
     </div>
     <div class="column m-2">
       <transition mode="out-in">
@@ -29,7 +29,7 @@ export default {
   data () {
     return {
       activepane: 5,
-      json: null
+      json: undefined
     }
   },
   methods: {

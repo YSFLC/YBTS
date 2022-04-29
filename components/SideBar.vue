@@ -6,12 +6,14 @@
         <b-menu-item
           icon="view-dashboard-variant-outline"
           label="DashBoard"
+          :disabled="json == undefined"
           :active="activepane === 0"
           @click="setActivePane(0)"
         />
         <b-menu-item
           icon="book-open-blank-variant"
           label="Sell"
+          :disabled="json == undefined"
           :active="activepane === 1"
           @click="setActivePane(1)"
         />
@@ -32,6 +34,7 @@
         <b-menu-item
           icon="download"
           label="Save"
+          :disabled="json == undefined"
           :active="activepane === 4"
           @click="setActivePane(4)"
         />
@@ -56,6 +59,12 @@
 
 <script>
 export default {
+  props: {
+    json: {
+      type: undefined,
+      required: true
+    }
+  },
   data () {
     return {
       activepane: 5
