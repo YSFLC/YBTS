@@ -6,13 +6,7 @@
     <div class="column m-2">
       <transition mode="out-in">
         <DashBoard v-if="activepane === 0" :json="json" />
-        <Sell
-          v-if="activepane === 1"
-          :json="json"
-          @sell="sell"
-          @addCoupon="addCoupon"
-          @addlog="addlog"
-        />
+        <Sell v-if="activepane === 1" :json="json" @sell="sell" @addCoupon="addCoupon" @addlog="addlog" />
         <Convert v-if="activepane === 2" />
         <Load v-if="activepane === 3" @jsondata="getJsonData" />
         <Save v-if="activepane === 4" :json="json" />
@@ -43,22 +37,16 @@ export default {
       let date = new Date()
       for (let i = 0; i < sellisbn.length; i++) {
         this.json['isbn'][String(sellisbn[i].isbn)].issold = true
-        this.json['isbn'][String(sellisbn[i].isbn)].soldtime = Math.floor(
-          date.getTime() / 1000
-        )
+        this.json['isbn'][String(sellisbn[i].isbn)].soldtime = Math.floor(date.getTime() / 1000)
       }
     },
     addCoupon (couponnum, sellisbn) {
       let date = new Date()
       this.json['union'][Math.floor(date.getTime() / 1000)] = {}
-      this.json['union'][Math.floor(date.getTime() / 1000)].couponnum =
-        couponnum
+      this.json['union'][Math.floor(date.getTime() / 1000)].couponnum = couponnum
       this.json['union'][Math.floor(date.getTime() / 1000)].sellisbn = []
-      console.log(sellisbn)
       for (let i = 0; i < sellisbn.length; i++) {
-        this.json['union'][Math.floor(date.getTime() / 1000)].sellisbn.push(
-          sellisbn[i].isbn
-        )
+        this.json['union'][Math.floor(date.getTime() / 1000)].sellisbn.push(sellisbn[i].isbn)
       }
     },
     addlog (logtype, comment) {
