@@ -26,7 +26,7 @@
       </b-upload>
     </b-field>
 
-    <b-button type="is-info" label="読み込み" @click="read" />
+    <b-button type="is-info" label="読み込み" :disabled="file === undefined" @click="read" />
   </section>
 </template>
 
