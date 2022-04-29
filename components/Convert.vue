@@ -3,7 +3,7 @@
     <b-field label="ISBNを改行区切りで入力してください">
       <b-input v-model="isbntabledata" type="textarea" />
     </b-field>
-    <b-button @click="convert()">
+    <b-button :disabled="isbntabledata.length === 0" @click="convert()">
       保存
     </b-button>
   </div>
