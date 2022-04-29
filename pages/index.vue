@@ -3,7 +3,7 @@
     <div>
       <img src="@/assets/icon.png" width="512" height="512" class="Logo">
       <h1 class="title">
-        YSFLC
+        YBTS
       </h1>
       <h5 class="subtitle">
         v2.0.0
