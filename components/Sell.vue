@@ -63,11 +63,11 @@ export default {
       }
       const isExistInJson = () => {
         // 元帳にデータが存在するか
-        return String(this.inputisbn) in this.json.isbn
+        return this.inputisbn in this.json.isbn
       }
       const isSold = () => {
         // もうその本は売れているか
-        return this.json.isbn[String(this.inputisbn)].issold
+        return this.json.isbn[this.inputisbn].issold
       }
 
       if (this.json.isbn === null) {
@@ -100,9 +100,7 @@ export default {
         })
       } else {
         // 売れる！！！！！！！！！！！！！！！！！！！！！！！！
-        this.sellisbn.push({})
-        this.sellisbn[this.sellisbn.length - 1].id = this.sellisbn.length
-        this.sellisbn[this.sellisbn.length - 1].isbn = this.inputisbn
+        this.sellisbn.push({ id: this.sellisbn.length, isbn: this.inputisbn })
         this.inputisbn = null
       }
     },

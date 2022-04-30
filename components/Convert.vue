@@ -34,9 +34,7 @@ export default {
               hasIcon: true
             })
           } else {
-            data.isbn[String(i)] = {}
-            data.isbn[String(i)].issold = false
-            data.isbn[String(i)].soldtime = null
+            data.isbn[i] = { issold: false, soldtime: null }
           }
         }
       }

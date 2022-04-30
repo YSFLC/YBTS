@@ -41,11 +41,7 @@ export default {
   created () {
     this.isbntable = []
     for (const i in this.json.isbn) {
-      if (this.json.isbn[i].issold) {
-        this.isbntable.push({ isbn: i, issold: true, soldtime: this.json.isbn[i].soldtime })
-      } else {
-        this.isbntable.push({ isbn: i, issold: false, soldtime: this.json.isbn[i].soldtime })
-      }
+      this.isbntable.push({ isbn: i, issold: this.json.isbn[i].issold, soldtime: this.json.isbn[i].soldtime })
     }
   }
 }

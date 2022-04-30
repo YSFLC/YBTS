@@ -57,7 +57,7 @@ export default {
 
     const datalist = []
     for (const i in res) {
-      datalist.push([Number(i) * 1000, res[i]])
+      datalist.push([i * 1000, res[i]])
     }
 
     this.series = [{ data: datalist }]
