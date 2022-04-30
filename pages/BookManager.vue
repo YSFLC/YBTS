@@ -34,26 +34,26 @@ export default {
       this.json = json
     },
     sell (sellisbn) {
-      let date = new Date()
+      const date = new Date()
       for (let i = 0; i < sellisbn.length; i++) {
-        this.json['isbn'][String(sellisbn[i].isbn)].issold = true
-        this.json['isbn'][String(sellisbn[i].isbn)].soldtime = Math.floor(date.getTime() / 1000)
+        this.json.isbn[sellisbn[i].isbn].issold = true
+        this.json.isbn[sellisbn[i].isbn].soldtime = Math.floor(date.getTime() / 1000)
       }
     },
     addCoupon (couponnum, sellisbn) {
-      let date = new Date()
-      this.json['union'][Math.floor(date.getTime() / 1000)] = {}
-      this.json['union'][Math.floor(date.getTime() / 1000)].couponnum = couponnum
-      this.json['union'][Math.floor(date.getTime() / 1000)].sellisbn = []
+      const date = parseInt(new Date().getTime() / 1000)
+      this.json.union[date] = {}
+      this.json.union[date].couponnum = couponnum
+      this.json.union[date].sellisbn = []
       for (let i = 0; i < sellisbn.length; i++) {
-        this.json['union'][Math.floor(date.getTime() / 1000)].sellisbn.push(sellisbn[i].isbn)
+        this.json.union[date].sellisbn.push(sellisbn[i].isbn)
       }
     },
     addlog (logtype, comment) {
-      let date = new Date()
-      this.json['log'][Math.floor(date.getTime() / 1000)] = {}
-      this.json['log'][Math.floor(date.getTime() / 1000)].logtype = logtype
-      this.json['log'][Math.floor(date.getTime() / 1000)].comment = comment
+      const date = parseInt(new Date().getTime() / 1000)
+      this.json.log[date] = {}
+      this.json.log[date].logtype = logtype
+      this.json.log[date].comment = comment
     }
   }
 }

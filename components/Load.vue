@@ -43,13 +43,13 @@ export default {
       reader.onload = () => {
         const json = JSON.parse(reader.result)
 
-        if (json['version'] === '2.0.0') {
+        if (json.version === '2.0.0') {
           this.$buefy.toast.open({
-            message: '本 ' + Object.keys(json['isbn']).length + ' 冊を正常にインポートしました'
+            message: '本 ' + Object.keys(json.isbn).length + ' 冊を正常にインポートしました'
           })
         } else {
           this.$buefy.toast.open({
-            message: '非サポートのバージョンですが、本 ' + Object.keys(json['isbn']).length + ' 冊をインポートしました',
+            message: '非サポートのバージョンですが、本 ' + Object.keys(json.isbn).length + ' 冊をインポートしました',
             type: 'is-danger'
           })
         }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <EarningGraph :json="json" :segment="segment" />
+    <EarningGraph :json="json" />
     <b-table :data="isbntable" focusable paginated per-page="10">
       <b-table-column v-slot="props" field="isbn" label="ISBN" sortable>
         {{ props.row.isbn }}
@@ -40,7 +40,7 @@ export default {
   },
   created () {
     this.isbntable = []
-    for (const i in this.json['isbn']) {
+    for (const i in this.json.isbn) {
       if (this.json.isbn[i].issold) {
         this.isbntable.push({ isbn: i, issold: true, soldtime: this.json.isbn[i].soldtime })
       } else {

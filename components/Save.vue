@@ -16,10 +16,10 @@ export default {
   },
   methods: {
     save () {
-      let jsondata = JSON.stringify(this.json)
+      const jsondata = JSON.stringify(this.json)
 
       const blob = new Blob([jsondata], { type: 'text/plain' })
-      let link = document.createElement('a')
+      const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
       link.download = 'isbn.json'
       link.click()

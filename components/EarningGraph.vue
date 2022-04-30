@@ -30,7 +30,7 @@ export default {
         },
         xaxis: {
           type: 'datetime',
-          title: { text: '時間' }
+          labels: { datetimeUTC: false }
         },
         yaxis: {
           type: 'numeric',
@@ -44,7 +44,7 @@ export default {
     }
   },
   created () {
-    let res = {}
+    const res = {}
     for (const i in this.json.isbn) {
       if (this.json.isbn[i].issold) {
         if (this.json.isbn[i].soldtime in res) {
@@ -55,7 +55,7 @@ export default {
       }
     }
 
-    let datalist = []
+    const datalist = []
     for (const i in res) {
       datalist.push([Number(i) * 1000, res[i]])
     }

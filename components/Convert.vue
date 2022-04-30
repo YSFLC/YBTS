@@ -18,15 +18,15 @@ export default {
   },
   methods: {
     convert () {
-      let data = {}
-      data['version'] = '2.0.0'
-      data['isbn'] = {}
-      data['union'] = {}
-      data['log'] = {}
+      const data = {}
+      data.version = '2.0.0'
+      data.isbn = {}
+      data.union = {}
+      data.log = {}
 
-      for (let i of this.isbntabledata.split('\n')) {
+      for (const i of this.isbntabledata.split('\n')) {
         if (i !== '') {
-          if (i in data['isbn']) {
+          if (i in data.isbn) {
             this.$buefy.notification.open({
               message: 'ISBN ' + i + ' が重複していました',
               position: 'is-bottom-right',
@@ -34,17 +34,17 @@ export default {
               hasIcon: true
             })
           } else {
-            data['isbn'][String(i)] = {}
-            data['isbn'][String(i)].issold = false
-            data['isbn'][String(i)].soldtime = null
+            data.isbn[String(i)] = {}
+            data.isbn[String(i)].issold = false
+            data.isbn[String(i)].soldtime = null
           }
         }
       }
 
-      let jsondata = JSON.stringify(data)
+      const jsondata = JSON.stringify(data)
 
       const blob = new Blob([jsondata], { type: 'text/plain' })
-      let link = document.createElement('a')
+      const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
       link.download = 'isbn.json'
       link.click()

@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     addISBN () {
-      let isInputISBNConflict = () => {
+      const isInputISBNConflict = () => {
         // 入力したisbnが今までの入力とダブっているかどうか
         for (let i = 0; i < this.sellisbn.length; i++) {
           if (this.sellisbn[i].isbn === this.inputisbn) {
@@ -61,16 +61,16 @@ export default {
         }
         return false
       }
-      let isExistInJson = () => {
+      const isExistInJson = () => {
         // 元帳にデータが存在するか
-        return String(this.inputisbn) in this.json['isbn']
+        return String(this.inputisbn) in this.json.isbn
       }
-      let isSold = () => {
+      const isSold = () => {
         // もうその本は売れているか
-        return this.json['isbn'][String(this.inputisbn)].issold
+        return this.json.isbn[String(this.inputisbn)].issold
       }
 
-      if (this.json['isbn'] === null) {
+      if (this.json.isbn === null) {
         // E-000 データがインポートされていない場合
         this.$emit('addlog', 'E-000', null)
         this.$buefy.toast.open({
@@ -79,7 +79,6 @@ export default {
         })
       } else if (isInputISBNConflict()) {
         // E-001 同じ入力があった場合
-        console.log('E-001')
         this.$emit('addlog', 'E-001', this.inputisbn)
         this.$buefy.toast.open({
           message: this.inputisbn + ' は既に追加されています',
