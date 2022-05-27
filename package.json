@@ -16,7 +16,7 @@
     "apexcharts": "^3.35.3",
     "core-js": "^3.22.5",
     "nuxt": "^2.15.3",
-    "nuxt-buefy": "^0.4.22",
+    "nuxt-buefy": "^0.4.23",
     "vue-apexcharts": "^1.6.2"
   },
   "devDependencies": {
