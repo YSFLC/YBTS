@@ -4,11 +4,13 @@
       <b-input v-model="inputisbn" placeholder="ISBN" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
     </b-field>
-    <b-table :data="sellisbn" :columns="columns">
+    <b-table :data="sellisbn" :columns="columns" :checked-rows.sync="checkedRows" checkable>
       <template #empty>
         <div class="has-text-centered">
           まだ入力されていません
         </div>
+      </template>
+      <template #bottom-left>
       </template>
     </b-table>
     <b-field message="クーポンの数を入力してください">
@@ -20,7 +22,7 @@
       />
     </b-field>
     <b-button type="is-info" label="すべて売却" @click="sell" />
-    <b-button type="is-danger" label="全追加取り消し" @click="removeAllISBN" />
+    <b-button type="is-danger" label="選択されたものを取り消し" @click="removeCheckedISBN" />
   </div>
 </template>
 
@@ -37,6 +39,8 @@ export default {
       inputisbn: null, // ISBN入力欄
       couponnum: 0, // クーポンの数
       sellisbn: [], // 購入リスト
+      checkboxPosition: 'left',
+      checkedRows: [],
       columns: [
         {
           field: 'id',
@@ -104,8 +108,10 @@ export default {
         this.inputisbn = null
       }
     },
-    removeAllISBN () {
-      this.sellisbn.splice(0)
+    removeCheckedISBN () {
+      this.checkedRows.forEach((row) => {
+        this.sellisbn.splice(this.sellisbn.findIndex(e => e.id === row.id), 1)
+      })
     },
     sell () {
       if (this.sellisbn.length === 0) {
