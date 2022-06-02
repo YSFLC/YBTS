@@ -3,6 +3,9 @@
     <b-button @click="save">
       Save json
     </b-button>
+    <b-button>
+      Export CSVfile
+    </b-button>
   </div>
 </template>
 
