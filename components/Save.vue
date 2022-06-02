@@ -30,7 +30,7 @@ export default {
     exportation () {
       let data
       for (const item in this.json) {
-        data = data + item + ',' + this.jason[item].issold + ',' + this.json[item].soldtime + '\n'
+        data = data + item + ',' + this.json[item].issold + ',' + this.json[item].soldtime + '\n'
       }
 
       const jsondata = JSON.stringify(data)
