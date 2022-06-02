@@ -4,7 +4,7 @@
       <b-input v-model="inputisbn" placeholder="ISBN" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
     </b-field>
-    <b-table :data="sellisbn" :columns="columns">
+    <b-table :data="sellisbn" :columns="columns" checkable>
       <template #empty>
         <div class="has-text-centered">
           まだ入力されていません
@@ -37,6 +37,7 @@ export default {
       inputisbn: null, // ISBN入力欄
       couponnum: 0, // クーポンの数
       sellisbn: [], // 購入リスト
+      checkboxPosition: 'left',
       columns: [
         {
           field: 'id',
