@@ -22,7 +22,6 @@
       />
     </b-field>
     <b-button type="is-info" label="すべて売却" @click="sell" />
-    <b-button type="is-danger" label="全追加取り消し" @click="removeAllISBN" />
     <b-button type="is-danger" label="選択されたものを取り消し" @click="removeCheckedISBN" />
   </div>
 </template>
@@ -108,9 +107,6 @@ export default {
         this.sellisbn.push({ id: this.sellisbn.length, isbn: this.inputisbn })
         this.inputisbn = null
       }
-    },
-    removeAllISBN () {
-      this.sellisbn.splice(0)
     },
     removeCheckedISBN () {
       this.checkedRows.forEach((row) => {
