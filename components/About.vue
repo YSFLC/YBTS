@@ -20,6 +20,7 @@
           Y. Murakami (UI-related)<br>
           I. Shiotsuki (UI-related)<br>
           K. Shibuya (adviser)<br>
+          J. Otani (developer)<br>
           L. Kono (developer)<br>
 
           Thank you for developing this.<br>
