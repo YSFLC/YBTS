@@ -28,17 +28,15 @@ export default {
       link.click()
     },
     exportation () {
-      let data
-      for (const item in this.json) {
-        data = data + item + ',' + this.json[item].issold + ',' + this.json[item].soldtime + '\n'
+      let data = ''
+      for (const item in this.json.isbn) {
+        data += item.toString() + ',' + this.json.isbn[item].issold + ',' + this.json.isbn[item].soldtime + '\n'
       }
 
-      const jsondata = JSON.stringify(data)
-
-      const blob = new Blob([jsondata], { type: 'text/plain' })
+      const blob = new Blob([data], { type: 'text/plain' })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
-      link.download = 'isbn.json'
+      link.download = 'isbn.csv'
       link.click()
     }
   }
