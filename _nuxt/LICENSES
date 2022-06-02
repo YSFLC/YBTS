@@ -1,17 +1,4 @@
 /*!
- * vue-client-only v0.0.0-semantic-release
- * (c) 2021-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/*!
- * vue-no-ssr v1.1.1
- * (c) 2018-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-
-/*!
  * ApexCharts v3.35.3
  * (c) 2018-2022 ApexCharts
  * Released under the MIT License.
@@ -24,6 +11,19 @@
 /*! svg.filter.js - v2.0.2 - 2016-02-24
   * https://github.com/wout/svg.filter.js
   * Copyright (c) 2016 Wout Fierens; Licensed MIT */
+
+
+/*!
+ * vue-client-only v0.0.0-semantic-release
+ * (c) 2021-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
 
 
 /*!
