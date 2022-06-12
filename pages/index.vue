@@ -9,7 +9,7 @@
         v2.0.0
       </h5>
       <div class="links">
-        <NuxtLink to="/BookManager" class="button--green">
+        <NuxtLink to="/AskPage" class="button--green">
           はじめる
         </NuxtLink>
         <a

@@ -12,14 +12,20 @@
       <div class="tile is-5 is-vertical is-parent">
         <div class="tile is-child box">
           <p class="title">
-            Developer
+            Developers
           </p>
-          Y. Narita (Principal developer)<br>
-          S. Sasaki (implementation)<br>
-          K. Katayama (implementation)<br>
-          Y. Murakami (UI-related)<br>
-          I. Shiotsuki (UI-related)<br>
-          K. Shibuya (adviser)<br>
+          <!--source: https://github.com/YSFLC/YBTS/issues/40 -->
+          Y.Narita    <b-tag icon="code-tags">Dev</b-tag><br>
+          S.Sasaki    <b-tag icon="code-tags">Dev</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br>
+          J.Otani     <b-tag icon="code-tags">Dev</b-tag><br>
+          L.Kono      <b-tag icon="code-tags">Dev</b-tag><br>
+          K.Katayama  <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br>
+          Y.Murakami  <b-tag icon="palette-outline">Logo</b-tag><b-tag icon="monitor-screenshot">UI/UX</b-tag><br>
+          I.Shiotsuki <b-tag icon="palette-outline">Logo</b-tag><b-tag icon="monitor-screenshot">UI/UX</b-tag><br>
+          M.Takano    <b-tag icon="monitor-screenshot">UI/UX</b-tag><br>
+          N.Kasami    <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br>
+          K.Inoue     <b-tag icon="palette-outline">Logo</b-tag><br>
+          <!-- K.Shibuya アドバイスありがとうございました!!!!!!!! -->
 
           Thank you for developing this.<br>
         </div>
@@ -28,6 +34,8 @@
             Version
           </p>
           <p>2021/7/20 Version1.0.0 クーポン以外の実装</p>
+          <p>2022/3/30 Version1.1.0 クーポンの実装、Dashbordの改良</p>
+          <p>2022/6/2 Version1.2.0 Saveページにエクスポート機能の実装、ISBNTableにチェックボックスの実装</p>
           <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
           <a href="https://buefy.org" target="_blank">Buefy</a>
         </div>
@@ -36,8 +44,8 @@
         <p class="title">
           What we used
         </p>
-        <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
-        <a href="https://buefy.org" target="_blank">Buefy</a>
+        <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a>
+        <a href="https://buefy.org" target="_blank" rel="noopener">Buefy</a>
       </div>
     </div>
   </div>
