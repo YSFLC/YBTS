@@ -1,9 +1,9 @@
 <template>
-  <div class="columns">
-    <div class="column is-narrow">
+  <div class="container">
+    <div class="sidebar">
       <SideBar :json="json" @changePane="getPane" />
     </div>
-    <div class="column m-2">
+    <div class="main">
       <transition mode="out-in">
         <DashBoard v-if="activepane === 0" :json="json" />
         <Sell v-if="activepane === 1" :json="json" @sell="sell" @addCoupon="addCoupon" @addlog="addlog" />
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-document.addEventListener('touchmove', (e) => { e.preventDefault() }, { passive: false })
 export default {
   data () {
     return {
@@ -60,18 +59,31 @@ export default {
 </script>
 
 <style>
-html,body{
-  overflow: hidden
-}
 </style>
 
 <style scoped>
-.v-enter-active,
+.container {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  display: flex;
+}
+.main {
+  padding-left: 300px;
+  width: 100%;
+  margin: 32px;
+}
+.sidebar {
+  width: 300px;
+  position: fixed;
+}
+
 .v-leave-active {
   transition: opacity 0.1s;
 }
 .v-enter,
 .v-leave-to {
+  transition: opacity 0.1s;
   opacity: 0;
 }
 </style>
