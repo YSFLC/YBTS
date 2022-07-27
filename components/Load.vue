@@ -4,7 +4,6 @@
       <b-upload
         v-model="file"
         drag-drop
-        accept=".json"
       >
         <section class="section">
           <div class="content has-text-centered">
