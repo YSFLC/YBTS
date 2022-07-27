@@ -143,7 +143,7 @@ export default {
           message: this.sellisbn.length + ' 冊の本を売却しました'
         })
 
-        this.removeAllISBN()
+        this.sellisbn.splice(0)
       }
     }
   }
