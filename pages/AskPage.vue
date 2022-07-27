@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="title">
-      <img src="@/assets/icon.png" width="512" height="512" class="Logo">
+      <img src="@/assets/logo.png" width="512" height="512" class="Logo">
       <h1>
         はじめてですか？
       </h1>

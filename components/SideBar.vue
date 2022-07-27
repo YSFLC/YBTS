@@ -1,7 +1,7 @@
 <template>
   <div class="box container">
     <b-menu>
-      <img src="@/assets/logo.svg" width="256" height="256">
+      <img src="@/assets/logo.png" width="256" height="256">
       <b-menu-list label="General">
         <b-menu-item
           icon="view-dashboard-variant-outline"

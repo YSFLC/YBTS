@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <img src="@/assets/icon.png" width="512" height="512" class="Logo">
+      <img src="@/assets/logo.png" width="512" height="512" class="Logo">
       <h1 class="title">
         YBTS
       </h1>
