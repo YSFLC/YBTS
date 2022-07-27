@@ -10,8 +10,6 @@
           まだ入力されていません
         </div>
       </template>
-      <template #bottom-left>
-      </template>
     </b-table>
     <b-field message="クーポンの数を入力してください">
       <b-numberinput
