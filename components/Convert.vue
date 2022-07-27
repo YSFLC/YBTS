@@ -41,7 +41,7 @@ export default {
 
       const jsondata = JSON.stringify(data)
 
-      const blob = new Blob([jsondata], { type: 'text/plain' })
+      const blob = new Blob([jsondata], { type: 'application/json' })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
       link.download = 'isbn.json'
