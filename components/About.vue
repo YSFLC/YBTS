@@ -14,20 +14,37 @@
           <p class="title">
             Developers
           </p>
-          <!--source: https://github.com/YSFLC/YBTS/issues/40 -->
-          Y.Narita    <b-tag icon="code-tags">Dev</b-tag><br>
-          S.Sasaki    <b-tag icon="code-tags">Dev</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br>
-          J.Otani     <b-tag icon="code-tags">Dev</b-tag><br>
-          L.Kono      <b-tag icon="code-tags">Dev</b-tag><br>
-          K.Katayama  <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br>
-          Y.Murakami  <b-tag icon="palette-outline">Logo</b-tag><b-tag icon="monitor-screenshot">UI/UX</b-tag><br>
-          I.Shiotsuki <b-tag icon="palette-outline">Logo</b-tag><b-tag icon="monitor-screenshot">UI/UX</b-tag><br>
-          M.Takano    <b-tag icon="monitor-screenshot">UI/UX</b-tag><br>
-          N.Kasami    <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br>
-          K.Inoue     <b-tag icon="palette-outline">Logo</b-tag><br>
-          <!-- K.Shibuya アドバイスありがとうございました!!!!!!!! -->
+          <div class="content">
+            <ul>
+              <!--source: https://github.com/YSFLC/YBTS/issues/40 -->
+              <li>Y.Narita <b-tag icon="code-tags">Dev</b-tag></li>
+              <li>
+                S.Sasaki <b-tag icon="code-tags">Dev</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br />
+              </li>
+              <li>J.Otani <b-tag icon="code-tags">Dev</b-tag><br /></li>
+              <li>L.Kono <b-tag icon="code-tags">Dev</b-tag><br /></li>
+              <li>
+                K.Katayama <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br />
+              </li>
+              <li>
+                Y.Murakami <b-tag icon="palette-outline">Logo</b-tag><b-tag icon="monitor-screenshot">UI/UX</b-tag><br />
+              </li>
+              <li>
+                I.Shiotsuki <b-tag icon="palette-outline">Logo</b-tag><b-tag icon="monitor-screenshot">UI/UX</b-tag><br />
+              </li>
+              <li>
+                M.Takano <b-tag icon="monitor-screenshot">UI/UX</b-tag><br />
+              </li>
+              <li>
+                N.Kasami <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br />
+              </li>
+              <li>K.Inoue <b-tag icon="palette-outline">Logo</b-tag><br /></li>
+              <!-- K.Shibuya アドバイスありがとうございました!!!!!!!! -->
+              <!-- 10～14期が開発しました  -->
 
-          Thank you for developing this.<br>
+              Thank you for developing this.<br />
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -40,9 +57,10 @@
             </p>
             <p>2021/7/20 Version1.0.0 クーポン以外の実装</p>
             <p>2022/3/30 Version1.1.0 クーポンの実装、Dashbordの改良</p>
-            <p>2022/6/2 Version1.2.0 Saveページにエクスポート機能の実装、ISBNTableにチェックボックスの実装</p>
-            <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a>
-            <a href="https://buefy.org" target="_blank">Buefy</a>
+            <p>
+              2022/6/2 Version1.2.0
+              Saveページにエクスポート機能の実装、ISBNTableにチェックボックスの実装
+            </p>
           </div>
         </div>
         <div class="tile is-parent">
@@ -59,8 +77,6 @@
   </div>
 </template>
 
-<script>
-</script>
+<script></script>
 
-<style scoped>
-</style>
+<style scoped></style>
