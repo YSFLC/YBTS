@@ -61,6 +61,10 @@
               2022/6/2 Version1.2.0
               Saveページにエクスポート機能の実装、ISBNTableにチェックボックスの実装
             </p>
+            <p>
+              2022/6/2 Version2.0.0
+              表記ゆれを修正 各種説明資料などを追加
+            </p>
           </div>
         </div>
         <div class="tile is-parent">
