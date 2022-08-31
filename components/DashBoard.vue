@@ -10,7 +10,7 @@
     </div>
     <EarningGraph :json="json" />
     <b-table :data="isbntable" focusable paginated per-page="10">
-      <b-table-column v-slot="props" field="isbn" label="ISBN" sortable>
+      <b-table-column v-slot="props" field="isbn" label="商品番号" sortable>
         {{ props.row.isbn }}
       </b-table-column>
       <b-table-column v-slot="props" field="issold" label="売却" sortable>

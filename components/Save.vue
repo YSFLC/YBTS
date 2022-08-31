@@ -41,7 +41,7 @@ export default {
       const blob = new Blob([jsondata], { type: 'text/plain' })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
-      link.download = 'isbn.json'
+      link.download = 'ybts.json'
       link.click()
     },
     exportation () {
@@ -53,7 +53,7 @@ export default {
       const blob = new Blob([data], { type: 'text/plain' })
       const link = document.createElement('a')
       link.href = window.URL.createObjectURL(blob)
-      link.download = 'isbn.csv'
+      link.download = 'ybts.csv'
       link.click()
     }
   }

@@ -20,6 +20,7 @@
           <b-numberinput
             v-model="couponnum"
             min="0"
+            :max="this.sellisbn == null ? 0 : this.sellisbn.length"
             placeholder="0"
             controls-position="compact"
           />
@@ -30,7 +31,13 @@
       <b-button type="is-info" label="すべて売却" @click="sell" />
       <b-button type="is-danger" outlined label="選択要素をリストから取り消し" @click="removeCheckedISBN" />
     </div>
-    <b-table :data="sellisbn" :columns="columns" :checked-rows.sync="checkedRows" checkable>
+    <b-table
+      :data="sellisbn"
+      :columns="columns"
+      :checked-rows.sync="checkedRows"
+      checkable
+      striped
+      hoverable>
       <template #empty>
         <div class="has-text-centered">
           まだ入力されていません
@@ -57,13 +64,8 @@ export default {
       checkedRows: [],
       columns: [
         {
-          field: 'id',
-          label: 'ID',
-          width: '40'
-        },
-        {
           field: 'isbn',
-          label: 'ISBN'
+          label: '商品番号'
         }
       ]
     }
@@ -126,6 +128,7 @@ export default {
       this.checkedRows.forEach((row) => {
         this.sellisbn.splice(this.sellisbn.findIndex(e => e.id === row.id), 1)
       })
+      this.couponnum = 0
     },
     sell () {
       if (this.sellisbn.length === 0) {
@@ -172,6 +175,5 @@ export default {
   display: inline-block;
 }
 .fullheight {
-  min-height: 95vh;
 }
 </style>
