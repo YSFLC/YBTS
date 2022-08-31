@@ -1,6 +1,14 @@
 <template>
   <div>
-    <b-field label="ISBNを改行区切りで入力してください">
+    <div class="hero-body box">
+      <p class="title is-large">
+        Convert
+      </p>
+      <p class="subtitle">
+        商品番号をJSONファイルに変換
+      </p>
+    </div>
+    <b-field label="商品番号を改行区切りで入力してください">
       <b-input v-model="isbntabledata" type="textarea" />
     </b-field>
     <b-button :disabled="isbntabledata.length === 0" @click="convert()">
@@ -28,9 +36,11 @@ export default {
         if (i !== '') {
           if (i in data.isbn) {
             this.$buefy.notification.open({
-              message: 'ISBN ' + i + ' が重複していました',
+              message: '番号 ' + i + ' が重複していました',
               position: 'is-bottom-right',
               type: 'is-danger',
+              duration: 9999999999,
+              progressBar: true,
               hasIcon: true
             })
           } else {

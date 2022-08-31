@@ -1,5 +1,13 @@
 <template>
   <section>
+    <div class="hero-body box">
+      <p class="title is-large">
+        Load
+      </p>
+      <p class="subtitle">
+        JSONデータの読み込み
+      </p>
+    </div>
     <b-field>
       <b-upload
         v-model="file"
@@ -44,11 +52,11 @@ export default {
 
         if (json.version === '2.0.0') {
           this.$buefy.toast.open({
-            message: '本 ' + Object.keys(json.isbn).length + ' 冊を正常にインポートしました'
+            message: '商品 ' + Object.keys(json.isbn).length + ' 個を正常にインポートしました'
           })
         } else {
           this.$buefy.toast.open({
-            message: '非サポートのバージョンですが、本 ' + Object.keys(json.isbn).length + ' 冊をインポートしました',
+            message: '非サポートのバージョンですが、商品 ' + Object.keys(json.isbn).length + ' 個をインポートしました',
             type: 'is-danger'
           })
         }

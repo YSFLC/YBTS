@@ -1,9 +1,35 @@
 <template>
   <div class="fullheight">
-    <b-field message="ISBNを入力してください">
-      <b-input v-model="inputisbn" placeholder="ISBN" />
-      <b-button type="is-primary" label="追加" @click="addISBN" />
-    </b-field>
+    <div class="hero-body box">
+      <p class="title is-large">
+        Sell
+      </p>
+      <p class="subtitle">
+        商品の売却
+      </p>
+    </div>
+    <div class="flex">
+      <div class="child">
+        <b-field message="商品番号をを入力してください">
+          <b-input v-model="inputisbn" placeholder="商品番号" />
+          <b-button type="is-primary" label="追加" @click="addISBN" />
+        </b-field>
+      </div>
+      <div class="child">
+        <b-field message="クーポンの数を入力してください">
+          <b-numberinput
+            v-model="couponnum"
+            min="0"
+            placeholder="0"
+            controls-position="compact"
+          />
+        </b-field>
+      </div>
+    </div>
+    <div class="flex">
+      <b-button type="is-info" label="すべて売却" @click="sell" />
+      <b-button type="is-danger" outlined label="選択要素をリストから取り消し" @click="removeCheckedISBN" />
+    </div>
     <b-table :data="sellisbn" :columns="columns" :checked-rows.sync="checkedRows" checkable>
       <template #empty>
         <div class="has-text-centered">
@@ -11,16 +37,6 @@
         </div>
       </template>
     </b-table>
-    <b-field message="クーポンの数を入力してください">
-      <b-numberinput
-        v-model="couponnum"
-        min="0"
-        placeholder="0"
-        controls-position="compact"
-      />
-    </b-field>
-    <b-button type="is-info" label="すべて売却" @click="sell" />
-    <b-button type="is-danger" label="選択されたものを取り消し" @click="removeCheckedISBN" />
   </div>
 </template>
 
@@ -90,7 +106,7 @@ export default {
         // E-002 元帳にデータが存在しなかった場合
         this.$emit('addlog', 'E-002', this.inputisbn)
         this.$buefy.toast.open({
-          message: this.inputisbn + ' なんて本は存在しません',
+          message: '商品 ' + this.inputisbn + ' は存在しません',
           type: 'is-danger'
         })
       } else if (isSold()) {
@@ -116,7 +132,7 @@ export default {
         // E-004 ISBNが一個も入力されていなかった場合
         this.$emit('addlog', 'E-004', this.sellisbn)
         this.$buefy.toast.open({
-          message: 'ISBNが入力されていません',
+          message: '商品番号が入力されていません',
           type: 'is-danger'
         })
       } else if (this.sellisbn.length < this.couponnum) {
@@ -127,7 +143,7 @@ export default {
           message:
             'クーポンは ' +
             this.couponnum +
-            '枚で 本の数 ' +
+            '枚で 商品数 ' +
             this.sellisbn.length +
             ' を超えています',
           type: 'is-danger'
@@ -138,7 +154,7 @@ export default {
         this.$emit('addCoupon', this.couponnum, this.sellisbn)
 
         this.$buefy.toast.open({
-          message: this.sellisbn.length + ' 冊の本を売却しました'
+          message: this.sellisbn.length + ' 個の商品を売却しました'
         })
 
         this.sellisbn.splice(0)
@@ -149,6 +165,12 @@ export default {
 </script>
 
 <style scoped>
+.flex {
+  margin-bottom: 10px;
+}
+.child {
+  display: inline-block;
+}
 .fullheight {
   min-height: 95vh;
 }
