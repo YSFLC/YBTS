@@ -31,9 +31,6 @@
       </b-table-column>
     </b-table>
     <div>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/xcode.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script>
       <b-collapse :open="false" aria-id="contentIdForA11y1">
         <template #trigger="props">
           <b-button
@@ -43,7 +40,7 @@
         </template>
         <div class="notification">
           <div class="content">
-            <pre><code class="json">{{this.json}}</code></pre>
+            <pre v-highlightjs><code class="json">{{this.json}}</code></pre>
           </div>
         </div>
       </b-collapse>
