@@ -1,16 +1,9 @@
 <template>
   <div class="fullheight">
-    <b-field message="ISBNを入力してください">
-      <b-input v-model="inputisbn" placeholder="ISBN" />
+    <b-field message="番号をを入力してください">
+      <b-input v-model="inputisbn" placeholder="商品番号" />
       <b-button type="is-primary" label="追加" @click="addISBN" />
     </b-field>
-    <b-table :data="sellisbn" :columns="columns" :checked-rows.sync="checkedRows" checkable>
-      <template #empty>
-        <div class="has-text-centered">
-          まだ入力されていません
-        </div>
-      </template>
-    </b-table>
     <b-field message="クーポンの数を入力してください">
       <b-numberinput
         v-model="couponnum"
@@ -20,7 +13,14 @@
       />
     </b-field>
     <b-button type="is-info" label="すべて売却" @click="sell" />
-    <b-button type="is-danger" label="選択されたものを取り消し" @click="removeCheckedISBN" />
+    <b-button type="is-danger" outlined label="選択されたものをリストから取り消し" @click="removeCheckedISBN" />
+    <b-table :data="sellisbn" :columns="columns" :checked-rows.sync="checkedRows" checkable>
+      <template #empty>
+        <div class="has-text-centered">
+          まだ入力されていません
+        </div>
+      </template>
+    </b-table>
   </div>
 </template>
 

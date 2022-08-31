@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-field label="ISBNを改行区切りで入力してください">
+    <b-field label="商品番号を改行区切りで入力してください">
       <b-input v-model="isbntabledata" type="textarea" />
     </b-field>
     <b-button :disabled="isbntabledata.length === 0" @click="convert()">
@@ -31,6 +31,8 @@ export default {
               message: 'ISBN ' + i + ' が重複していました',
               position: 'is-bottom-right',
               type: 'is-danger',
+              duration: 9999999999,
+              progressBar: true,
               hasIcon: true
             })
           } else {

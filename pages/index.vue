@@ -5,7 +5,7 @@
       <h1 class="title">YBTS</h1>
       <h5 class="subtitle">v2.0.0</h5>
       <div class="links">
-        <NuxtLink to="/AskPage" class="button--green"> はじめる </NuxtLink>
+        <NuxtLink to="/BookManager" class="button--green"> はじめる </NuxtLink>
         <a
           href="https://github.com/YSFLC/YBTS/wiki"
           target="_blank"
@@ -28,7 +28,6 @@
 </template>
 
 <script>
-export default {};
 </script>
 
 <style scoped>

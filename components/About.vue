@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="section">
+    <section class="box section">
       <h1 class="title">
         About
       </h1>
@@ -39,8 +39,8 @@
                 N.Kasami <b-tag icon="monitor-screenshot">UI/UX</b-tag><b-tag icon="file-document-outline">Doc</b-tag><br />
               </li>
               <li>K.Inoue <b-tag icon="palette-outline">Logo</b-tag><br /></li>
-              <!-- K.Shibuya アドバイスありがとうございました!!!!!!!! -->
-              <!-- 10～14期が開発しました  -->
+              <li>K.Shibuya <b-tag icon="palette-outline">Logo</b-tag><br /></li>
+              <!-- YSFH10～14期が開発しました  -->
 
               Thank you for developing this.<br />
             </ul>
