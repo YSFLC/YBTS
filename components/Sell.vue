@@ -128,6 +128,7 @@ export default {
       this.checkedRows.forEach((row) => {
         this.sellisbn.splice(this.sellisbn.findIndex(e => e.id === row.id), 1)
       })
+      this.couponnum = 0
     },
     sell () {
       if (this.sellisbn.length === 0) {
