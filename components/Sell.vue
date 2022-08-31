@@ -57,13 +57,8 @@ export default {
       checkedRows: [],
       columns: [
         {
-          field: 'id',
-          label: 'ID',
-          width: '40'
-        },
-        {
           field: 'isbn',
-          label: 'ISBN'
+          label: '商品番号'
         }
       ]
     }

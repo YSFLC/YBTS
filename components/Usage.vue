@@ -1,7 +1,7 @@
 <template>
-  <div class="fullheight">
+  <div>
     <div class="hero-body box">
-      <p class="title is-large">
+      <p class="title">
         Usage
       </p>
       <p class="subtitle">
@@ -83,10 +83,6 @@
 </script>
 
 <style>
-.fullheight {
-  min-height: 100vh;
-  min-width: 100vw;
-}
 h1 {
   font-size: 26px;
 }
