@@ -35,7 +35,7 @@ export default {
         yaxis: {
           type: 'numeric',
           labels: { formatter: val => val.toFixed(0) },
-          title: { text: '売却冊数' }
+          title: { text: '売却数' }
         },
         fill: {
           opacity: 0.5

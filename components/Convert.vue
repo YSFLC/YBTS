@@ -28,7 +28,7 @@ export default {
         if (i !== '') {
           if (i in data.isbn) {
             this.$buefy.notification.open({
-              message: 'ISBN ' + i + ' が重複していました',
+              message: '番号 ' + i + ' が重複していました',
               position: 'is-bottom-right',
               type: 'is-danger',
               duration: 9999999999,
