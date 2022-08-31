@@ -60,8 +60,7 @@ export default {
 
   css: [
     {
-      src: '~/node_modules/highlight.js/styles/xcode.css',
-      lang: 'css'
+      src: '~/node_modules/highlight.js/styles/xcode.css'
     }
   ]
 }
