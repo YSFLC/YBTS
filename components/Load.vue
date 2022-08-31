@@ -1,5 +1,13 @@
 <template>
   <section>
+    <div class="hero-body box">
+      <p class="title is-large">
+        Load
+      </p>
+      <p class="subtitle">
+        JSONデータの読み込み
+      </p>
+    </div>
     <b-field>
       <b-upload
         v-model="file"

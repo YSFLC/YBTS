@@ -1,5 +1,13 @@
 <template>
   <div class="fullheight">
+    <div class="hero-body box">
+      <p class="title is-large">
+        Sell
+      </p>
+      <p class="subtitle">
+        商品の売却
+      </p>
+    </div>
     <div class="flex">
       <div class="child">
         <b-field message="商品番号をを入力してください">

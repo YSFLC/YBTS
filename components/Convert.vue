@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="hero-body box">
+      <p class="title is-large">
+        Convert
+      </p>
+      <p class="subtitle">
+        商品番号をJSONファイルに変換
+      </p>
+    </div>
     <b-field label="商品番号を改行区切りで入力してください">
       <b-input v-model="isbntabledata" type="textarea" />
     </b-field>

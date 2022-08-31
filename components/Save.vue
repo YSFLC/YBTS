@@ -1,11 +1,28 @@
 <template>
   <div>
-    <b-button @click="save">
-      Save json
-    </b-button>
-    <b-button @click="exportation">
-      Export CSVfile
-    </b-button>
+    <div class="hero-body box">
+      <p class="title is-large">
+        Save
+      </p>
+      <p class="subtitle">
+        データの保存/変換
+      </p>
+    </div>
+    <div class="box">
+      バージョン: {{this.json.version}}<br>
+      商品数: {{Object.keys(this.json.isbn).length}}<br>
+      エラーログ数: {{Object.keys(this.json.log).length}}<br>
+      <b-tooltip label="JSON形式で保存します アプリで読み込みが可能です" position="is-bottom">
+        <b-button @click="save">
+          JSON形式で保存
+        </b-button>
+      </b-tooltip>
+      <b-tooltip label="CSV形式で保存します Excelなどで処理できますが アプリで読み込みはできません" position="is-bottom">
+        <b-button @click="exportation">
+          Export CSVfile
+        </b-button>
+      </b-tooltip>
+    </div>
   </div>
 </template>
 
