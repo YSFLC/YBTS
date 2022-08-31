@@ -28,6 +28,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/vue-highlightjs'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -55,5 +56,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  css: [
+    {
+      src: '~/node_modules/highlight.js/styles/xcode.css',
+      lang: 'css'
+    }
+  ]
 }
