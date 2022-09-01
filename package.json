@@ -31,6 +31,6 @@
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
     "prettier-eslint": "^15.0.1",
-    "prettier-eslint-cli": "^6.0.1"
+    "prettier-eslint-cli": "^7.1.0"
   }
 }
